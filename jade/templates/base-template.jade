@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+	block vars
+	
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		title #{title}
+		link(rel='icon', type='image/x-icon', href='favicon.ico')
+		//- link(rel="stylesheet", href="css/bootstrap-select.min.css")
+		link(rel="stylesheet", href="css/style.css")
+
+	body(class="#{bodyClass}")
+
+		block header
+		if bodyClass == "page-home"
+			include ../includes/header
+		else
+			include ../includes/header
+
+		block content
+			
+
+		block footer
+		include ../includes/footer
+
+		block scripts
+		include ../includes/scripts
+
+		block custom-scripts
+

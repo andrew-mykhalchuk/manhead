@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manhead - Browse data</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="page-browse-data">
+    <header><a href="" class="logo"><img src="../images/manhead-logo.svg" alt=""></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="archive.html">Archive</a></li>
+          <li class="active"><a href="browse-data-card-view.html">Browse data</a></li>
+          <li><a href="manage-contacts.html">Manage contacts</a></li>
+        </ul><a href="" class="btn btn-md btn-white">Sign out</a>
+      </nav>
+    </header>
+    <div class="content-container">
+      <div class="content-header">
+        <div class="header-inner">
+          <h1>Browse data</h1>
+          <div class="header-right">
+            <form action="" class="browse-search">
+              <div class="search-wrapper search-green">
+                <input type="text" placeholder="Search" class="search-field"><a href="" class="btn-search"></a>
+              </div>
+            </form><a href="" class="btn btn-lg btn-green">Generate PDF</a>
+          </div>
+        </div>
+        <div class="view-options"><a href="browse-data-card-view.html" class="text-link active"><span>Card view</span><i class="icon-card-view"></i></a><a href="browse-data-list-view.html" class="text-link"><span>List view</span><i class="icon-list-view"></i></a></div>
+        <div class="search-filters">
+          <div class="dropdown sort-by"><a id="dLabel" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort results by<span class="arrow-down"></span></a>
+            <ul aria-labelledby="dLabel" class="dropdown-menu">
+              <li><a href="">Price</a></li>
+              <li><a href="">Best sellers</a></li>
+              <li><a href="">A-Z</a></li>
+              <li><a href="">Z-A</a></li>
+            </ul>
+          </div>
+          <div class="dropdown items-visible"><a id="dLabel" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">60 Per page<span class="arrow-down"></span></a>
+            <ul aria-labelledby="dLabel" class="dropdown-menu">
+              <li><a href="">15 Per page</a></li>
+              <li><a href="">30 Per page</a></li>
+              <li><a href="">All</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <aside>
+        <div class="panel panel-gray">
+          <div class="panel-heading">Website</div>
+          <div class="panel-body">
+            <form action="" class="browse-search">
+              <div class="search-wrapper search-small search-gray">
+                <input type="text" placeholder="Search" class="search-field"><a href="" class="btn-search"></a>
+              </div>
+              <div class="checkbox-list">
+                <label class="control control--checkbox">
+                  <input type="checkbox"><span>SELECT ALL</span>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <input type="checkbox"><span>Amazon</span>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <input type="checkbox" checked><span>Etsy</span>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <input type="checkbox"><span>Redbubble</span>
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="panel panel-gray">
+          <div class="panel-heading">Bands</div>
+          <div class="panel-body">
+            <form action="" class="browse-search">
+              <div class="search-wrapper search-small search-gray">
+                <input type="text" placeholder="Search" class="search-field"><a href="" class="btn-search"></a>
+              </div>
+              <div class="checkbox-list">
+                <label class="control control--checkbox">
+                  <input type="checkbox" checked><span>SELECT ALL</span>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <input type="checkbox"><span>30 Seconds to Mars</span>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <input type="checkbox"><span>Fall Out Boy</span>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <input type="checkbox"><span>Panic at the Disco</span>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <input type="checkbox"><span>Lorem Ipsum</span>
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </aside>
+      <main class="main-content">
+        <section class="item-list">
+          <ul class="card-view">
+            <li class="item-card">
+              <div class="img-container"><img src="./images/t-shirt-1.jpg" alt=""></div>
+              <h3>Galaxy T-Shirt</h3>
+              <p class="source">Redbubble</p><a href="" class="btn btn-md btn-white-green">Select</a>
+            </li>
+            <li class="item-card selected">
+              <div class="img-container"><img src="./images/t-shirt-2.jpg" alt=""></div>
+              <h3>Triad T-Shirt</h3>
+              <p class="source">Redbubble</p><a href="" class="btn btn-md btn-white-green">Remove</a>
+            </li>
+            <li class="item-card">
+              <div class="img-container"><img src="./images/t-shirt-3.jpg" alt=""></div>
+              <h3>Dragon T-Shirt</h3>
+              <p class="source">Redbubble</p><a href="" class="btn btn-md btn-white-green">Select</a>
+            </li>
+            <li class="item-card selected">
+              <div class="img-container"><img src="./images/t-shirt-4.jpg" alt=""></div>
+              <h3>Sticker</h3>
+              <p class="source">Etsy</p><a href="" class="btn btn-md btn-white-green">Remove</a>
+            </li>
+            <li class="item-card">
+              <div class="img-container"><img src="./images/t-shirt-5.jpg" alt=""></div>
+              <h3>Triad T-shirt</h3>
+              <p class="source">Redbubble</p><a href="" class="btn btn-md btn-white-green">Select</a>
+            </li>
+            <li class="item-card">
+              <div class="img-container"><img src="./images/t-shirt-6.jpg" alt=""></div>
+              <h3>iPhone Case</h3>
+              <p class="source">Etsy</p><a href="" class="btn btn-md btn-white-green">Select</a>
+            </li>
+            <li class="item-card">
+              <div class="img-container"><img src="./images/t-shirt-7.jpg" alt=""></div>
+              <h3>iPhone Case</h3>
+              <p class="source">Etsy</p><a href="" class="btn btn-md btn-white-green">Select</a>
+            </li>
+            <li class="item-card">
+              <div class="img-container"><img src="./images/t-shirt-8.jpg" alt=""></div>
+              <h3>T-shirt</h3>
+              <p class="source">Redbubble</p><a href="" class="btn btn-md btn-white-green">Select</a>
+            </li>
+            <li class="item-card">
+              <div class="img-container"><img src="./images/t-shirt-1.jpg" alt=""></div>
+              <h3>Galaxy T-Shirt</h3>
+              <p class="source">Redbubble</p><a href="" class="btn btn-md btn-white-green">Select</a>
+            </li>
+            <li class="item-card selected">
+              <div class="img-container"><img src="./images/t-shirt-2.jpg" alt=""></div>
+              <h3>Triad T-Shirt</h3>
+              <p class="source">Redbubble</p><a href="" class="btn btn-md btn-white-green">Remove</a>
+            </li>
+            <li class="item-card">
+              <div class="img-container"><img src="./images/t-shirt-3.jpg" alt=""></div>
+              <h3>Dragon T-Shirt</h3>
+              <p class="source">Redbubble</p><a href="" class="btn btn-md btn-white-green">Select</a>
+            </li>
+            <li class="item-card selected">
+              <div class="img-container"><img src="./images/t-shirt-4.jpg" alt=""></div>
+              <h3>Sticker</h3>
+              <p class="source">Etsy</p><a href="" class="btn btn-md btn-white-green">Remove</a>
+            </li>
+          </ul><a href="" class="text-link see-more">See more</a>
+        </section>
+      </main>
+    </div>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

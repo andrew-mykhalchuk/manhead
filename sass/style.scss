@@ -1,0 +1,367 @@
+@import '_bootstrap';
+@import '_fonts';
+@import '_variables';
+@import '_mixins';
+@import '_global';
+@import '_helpers';
+@import '_buttons';
+@import '_custom-checkbox';
+@import './bootstrap-select/bootstrap-select';
+@import '_modals';
+
+
+
+
+
+// =========================================
+// Page Browse Data ========================
+// =========================================
+.page-browse-data {
+
+}
+
+.content-header {
+	max-width: 1048px;
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
+	margin-left: auto;
+	padding: 0 12px;
+}
+
+.header-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 43px;
+	h1 {
+		margin: 0;
+		font-family: $proxima-s-md;
+		@include fsz(25px);
+		line-height: 30px;
+		color: $gray-darkest;
+		text-transform: uppercase;
+	}
+	.header-right {
+		display: flex;
+		.btn {
+			margin-left: 20px;
+		}
+	}
+}
+
+.view-options {
+	margin-top: 20px;
+	text-align: right;
+	.text-link {
+		@include fsz(10px);
+		line-height: 12px;
+		text-transform: uppercase;
+		opacity: .4;
+		&:hover {
+			i {
+				background-color: $gray-darkest;
+				border-color: $gray-darkest;
+			}
+		}
+		&:not(:last-of-type) {
+			margin-right: 20px;
+		}
+		&.active {
+			opacity: 1;
+		}
+		& > * {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		span {
+			margin-right: 5px;
+		}
+		i {
+			transition: $transition;
+			width: 8px;
+		}
+		.icon-card-view {
+			height: 8px;
+			background-color: $gray;
+		}
+		.icon-list-view {
+			height: 2px;
+			margin: 3px 0;
+			background-color: $gray;
+			position: relative;
+			&:before,
+			&:after {
+				display: block;
+				content: '';
+				position: absolute;
+				width: inherit;
+				height: inherit;
+				background-color: inherit;
+
+			}
+			&:before {
+				top: -3px;
+			}
+			&:after {
+				bottom: -3px;
+			}
+		}
+	}
+}
+
+
+
+.item-list {
+	margin-bottom: 75px;
+	text-align: center;
+
+	// Card view
+	.card-view {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-left: -8px;
+		margin-right: -8px;
+		text-align: center;
+		.item-card {
+			display: flex;
+			flex-direction: column;
+			flex-shrink: 0;
+			width: 244px;
+			margin: 0 8px 16px 8px;
+			padding: 30px 10px 20px 10px;
+			background-color: $gray-lightest;
+			border: 1px solid $gray-lighter;
+			border-radius: 2px;
+			text-align: center;
+			&.selected {
+				.btn-white-green {
+					&:hover {
+						color: $green;
+						background-color: $white;
+					}
+					color: $white;
+					background-color: $green;
+				}
+			}
+			.img-container {
+				display: block;
+				width: 110px;
+				height: 110px;
+				margin: 0 auto;
+				border: 1px solid $white;
+				border-radius: 50%;
+				box-shadow: 0px 0px 5px 0px rgba($black, 0.25);
+				overflow: hidden;
+			}
+			h3 {
+				margin: 30px 0 0;
+				font-family: $proxima-s-r;
+				@include fsz(25px);
+				line-height: 30px;
+				color: $gray-darkest;
+			}
+			.source {
+				margin: 5px 0 0;
+				font-family: $proxima-s-r;
+				@include fsz(11px);
+				line-height: 13px;
+				text-transform: uppercase;
+				color: $gray-darkest;
+			}
+			.btn-white-green {
+				width: 90px;
+				height: 37px;
+				margin: 34px auto 0;
+				padding: 11px;
+				font-family: $proxima-s-r;
+				@include fsz(11px);
+				line-height: 13px;
+			}
+		}
+	}
+
+	// List view
+	.list-view {
+		margin-top: 5px;
+		border: none;
+		tr {
+			color: $gray-darkest;
+			text-align: left;
+			&:nth-child(even) {
+				background-color: rgba($gray-light, .5);
+			}
+			th,
+			td {
+				padding-left: 20px;
+				vertical-align: middle;
+				@include fsz(14px);
+				line-height: 17px;
+				border-color: $gray-lighter;
+			}
+			th {
+				height: 50px;
+				border: none;
+				@include fsz(12px);
+				line-height: 14px;
+				text-transform: uppercase;
+				&:hover,
+				&.sort-by {
+					a {
+						color: $green;
+						.arrow-down {
+							&:before {
+								border-color: $green;
+							}
+						}
+					}
+				}
+				&:not(:last-of-type) {
+					position: relative;
+					&:after {
+						display: block;
+						content: '';
+						width: 1px;
+						height: 14px;
+						background-color: #dadada;
+						position: absolute;
+						top: 0;
+						right: -1px;
+						bottom: 0;
+						margin: auto;
+					}
+				}
+				a {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 5px 0;
+					color: inherit;
+					font-weight: initial;
+					.arrow-down {
+						&:before {
+							transition: $transition;
+							border-color: #979797;
+						}
+					}
+				}
+			}
+			td {
+				height: 78px;
+				border-color: $gray-lighter;
+				a {
+					display: inline-block;
+				}
+			}
+			.website,
+			.title,
+			.band,
+			.f-name,
+			.l-name {
+				text-transform: uppercase;
+			}
+			.link {
+				max-width: 350px;
+				p {
+					display: inline-block;
+					width: 200px;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+			}
+			.image {
+				padding: 0;
+				text-align: center;
+			}
+			.controls {
+				a {
+					&:not(:last-of-type) {
+						margin: 0 50px 0 30px;
+					}
+				}
+			}
+		}
+	}
+
+	// Show more button
+	.see-more {
+		margin-top: 30px;
+		font-family: $proxima-s-r;
+		@include fsz(12px);
+		line-height: 14px;
+		color: $green;
+		text-transform: uppercase;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+
+
+// =========================================
+// Page Manage contact =====================
+// =========================================
+.page-manage-contacts {
+	.header-inner {
+		margin-bottom: 50px;
+	}
+
+
+	tr.confirm-dialog {
+		position: relative;
+		.delete-contact-confirmation {
+			display: flex;
+		}
+	}
+
+	// .delete-contact-confirmation {
+	
+	// }
+}
+
+.tr-confirm {
+	// display: table-row;
+	td {
+		// justify-content: flex-end;
+		// align-items: center;
+		min-height: 50px;
+		background-color: $gray-lightest;
+		// position: absolute;
+		// top: 0;
+		// right: 0;
+		// bottom: 0;
+		// left: 0;
+		// margin: auto;
+		padding: 5px 180px 5px 15px;
+		p {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 30px 0 0;
+			@include fsz(14px);
+			line-height: 17px;
+			color: $green;
+			text-transform: uppercase;
+		}
+		.btn {
+			display: inline-block;
+			vertical-align: middle;
+			width: 160px;
+			&:not(:last-of-type) {
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

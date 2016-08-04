@@ -1,0 +1,204 @@
+@import '_variables';
+
+$primary-color: $gray;
+$secondary-color: $green;
+
+.control {
+  display: block;
+  margin: 0;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+  .control__indicator {
+    &:hover {
+      border-color: $secondary-color;
+    }
+  }
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control__indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  // background: $secondary-color;
+  background-color: transparent;
+  border: 1px solid $primary-color;
+  border-radius: 2px;
+  transition: all .25s ease-in-out;
+}
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+// .control:hover input ~ .control__indicator,
+// .control input:focus ~ .control__indicator {
+//   background: #46a465;
+//   opacity: .25;
+// }
+.control input:checked {
+  & ~ span {
+    color: $secondary-color;
+  }
+  & ~ .control__indicator {
+    background: $secondary-color;
+    border-color: $secondary-color;
+    // position: relative;
+    
+    // Checkbox styles
+    // &:before {
+    //   display: block;
+    //   content: '';
+    //   width: 10px;
+    //   height: 6px;
+    //   border-bottom: 2px solid $secondary-color;
+    //   border-left: 2px solid $secondary-color;
+    //   position: absolute;
+    //   top: 3px;
+    //   right: 0;
+    //   bottom: 0;
+    //   left: 2px;
+    //   transform: rotate(-45deg);
+    // }
+    // opacity: 1;
+  }
+}
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  // background: #46a465;
+}
+.control input:disabled ~ .control__indicator {
+  background: #e5e5e5;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control__indicator:after {
+  // display: block;
+}
+.control--checkbox .control__indicator:after {
+  // left: 6px;
+  // top: 2px;
+  // width: 3px;
+  // height: 8px;
+  // border: solid $secondary-color;
+  // border-width: 0 2px 2px 0;
+  // transform: rotate(45deg);
+  // width: auto;
+  // height: auto;
+  // border: none;
+  // background-color: $secondary-color;
+  // transform: none;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  // margin: auto;
+}
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b;
+}
+.control--radio .control__indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+.control--radio input:disabled ~ .control__indicator:after {
+  background: #7b7b7b;
+}
+.select {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.select select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  background: #e5e5e5;
+  color: #7b7b7b;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.select select::-ms-expand {
+  display: none;
+}
+.select select:hover,
+.select select:focus {
+  color: #000;
+  background: #ccc;
+}
+.select select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.select__arrow {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: #7b7b7b transparent transparent transparent;
+}
+.select select:hover ~ .select__arrow,
+.select select:focus ~ .select__arrow {
+  border-top-color: #000;
+}
+.select select:disabled ~ .select__arrow {
+  border-top-color: #ccc;
+}
+
+
+
+.control--checkbox {
+  .control__indicator {
+    // background-color: transparent;
+    // border: 1px solid $secondary-color;
+    // &:after {
+    //   width: auto;
+    //   height: auto;
+    //   border: none;
+    //   background-color: $secondary-color;
+    //   transform: none;
+    //   top: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   left: 0;
+    //   margin: auto;
+    // }
+  }
+}
+
+
+
+
+
+// Checkbox gray
+.checkbox-gray {
+  color: #949494;
+  .control__indicator {
+    background-color: transparent;
+    border: 1px solid #949494;
+  }
+}

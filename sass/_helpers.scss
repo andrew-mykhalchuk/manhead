@@ -1,0 +1,146 @@
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.absolute-center {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.is-hidden {
+  display: none!important;
+}
+
+// .vertical-divider {
+//   display: block;
+//   width: 1px;
+//   background-color: $grey;
+// }
+
+.text-black {
+  color: $black;
+}
+
+// Selext Box
+// .select {
+//   display: inline-block;
+//   position: relative;
+//   &:before {
+//     display: block;
+//     content: ' ';
+//     margin-top: -3px;
+//     pointer-events: none;
+//     border-top: 5px solid #00A4D1;
+//     border-left: 5px solid transparent;
+//     border-right: 5px solid transparent;
+//     position: absolute;
+//     right: 11px;
+//     top: 50%;
+//   }
+//   select {
+//     display: block;
+//     height: 30px;
+//     margin: 0;
+//     padding: 7px 30px 7px 13px;
+//     background: #fff;
+//     color: #00A4D1;
+//     font-family: $proxima-b;
+//     @include fsz(12px);
+//     line-height: 15px;
+//     text-transform: uppercase;
+//     appearance: none;
+//     border: 1px solid $blue;
+//     border-radius: 5px;
+//     box-sizing: border-box;
+//     outline: none;
+
+//     option {
+//       padding: 7px 13px;
+//       &:first-child {
+//         display: none;
+//       }
+//     }
+//   }
+// }
+
+
+
+// Checkbox
+.checkbox-label {
+  display: inline-block;
+  width: 97px;
+  height: 30px;
+  padding: 7px 55px 7px 10px;
+  position: relative;
+  text-transform: uppercase;
+  // font-family: $proxima-b;
+  @include fsz(12px);
+  line-height: 15px;
+  // color: $blue;
+  cursor: pointer;
+  border: 1px solid #00A4D1;
+  border-radius: 4px;
+  &:before,
+  &:after {
+    display: block;
+    content: ' ';
+    position: absolute;
+    transition: all 0.25s ease-out;
+  }
+  &:before {
+    width: 48px;
+    height: 28px;
+    background-color: #ccc;
+    top: 0;
+    right: 0;
+    border-radius: 3px;
+  }
+  &:after {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    top: 4px;
+    right: 24px;
+    border-radius: 2px;
+  }
+}
+
+.checkbox:checked ~ .checkbox-label,
+.checkbox:checked ~ * .checkbox-label {
+  &:before{
+    background: #00A4D1;
+  }
+  &:after {
+    right: 4px;
+  }
+}
+
+.checkbox,
+.expandable {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+

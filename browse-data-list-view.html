@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manhead - Browse data</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="page-browse-data">
+    <header><a href="" class="logo"><img src="../images/manhead-logo.svg" alt=""></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="archive.html">Archive</a></li>
+          <li class="active"><a href="browse-data-card-view.html">Browse data</a></li>
+          <li><a href="manage-contacts.html">Manage contacts</a></li>
+        </ul><a href="" class="btn btn-md btn-white">Sign out</a>
+      </nav>
+    </header>
+    <div class="content-container">
+      <div class="content-header">
+        <div class="header-inner">
+          <h1>Browse data</h1>
+          <div class="header-right">
+            <form action="" class="browse-search">
+              <div class="search-wrapper search-green">
+                <input type="text" placeholder="Search" class="search-field"><a href="" class="btn-search"></a>
+              </div>
+            </form><a href="" class="btn btn-lg btn-green">Generate PDF</a>
+          </div>
+        </div>
+        <div class="view-options"><a href="browse-data-card-view.html" class="text-link"><span>Card view</span><i class="icon-card-view"></i></a><a href="browse-data-list-view.html" class="text-link active"><span>List view</span><i class="icon-list-view"></i></a></div>
+      </div>
+      <aside>
+        <div class="panel panel-gray">
+          <div class="panel-heading">Website</div>
+          <div class="panel-body">
+            <form action="" class="browse-search">
+              <div class="search-wrapper search-small search-gray">
+                <input type="text" placeholder="Search" class="search-field"><a href="" class="btn-search"></a>
+              </div>
+              <div class="checkbox-list">
+                <label class="control control--checkbox">
+                  <input type="checkbox"><span>SELECT ALL</span>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <input type="checkbox"><span>Amazon</span>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <input type="checkbox" checked><span>Etsy</span>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <input type="checkbox"><span>Redbubble</span>
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="panel panel-gray">
+          <div class="panel-heading">Bands</div>
+          <div class="panel-body">
+            <form action="" class="browse-search">
+              <div class="search-wrapper search-small search-gray">
+                <input type="text" placeholder="Search" class="search-field"><a href="" class="btn-search"></a>
+              </div>
+              <div class="checkbox-list">
+                <label class="control control--checkbox">
+                  <input type="checkbox" checked><span>SELECT ALL</span>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <input type="checkbox"><span>30 Seconds to Mars</span>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <input type="checkbox"><span>Fall Out Boy</span>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <input type="checkbox"><span>Panic at the Disco</span>
+                  <div class="control__indicator"></div>
+                </label>
+                <label class="control control--checkbox">
+                  <input type="checkbox"><span>Lorem Ipsum</span>
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </aside>
+      <main class="main-content">
+        <section class="item-list">
+          <table class="table table-bordered list-view">
+            <tr>
+              <th><a href=""><span>Website</span><i class="arrow-down"></i></a></th>
+              <th class="sort-by"><a href=""><span>Title</span><i class="arrow-down"></i></a></th>
+              <th><a href=""><span>Band</span><i class="arrow-down"></i></a></th>
+              <th><a href=""><span>Link</span><i class="arrow-down"></i></a></th>
+              <th><a href=""><span>Image</span><i class="arrow-down"></i></a></th>
+              <th><a href=""><span>Date</span><i class="arrow-down"></i></a></th>
+            </tr>
+            <tr>
+              <td class="website">Amazon</td>
+              <td class="title">Triad T-Shirt</td>
+              <td class="band">30 Seconds to mars</td>
+              <td class="link">www.amazon.com/t-shirts/</td>
+              <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
+              <td class="date">02 04 15</td>
+            </tr>
+            <tr>
+              <td class="website">Redbubble</td>
+              <td class="title">iPhone Case/Skin</td>
+              <td class="band">30 Seconds to mars</td>
+              <td class="link">www.redbubble.com</td>
+              <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
+              <td class="date">02 04 15</td>
+            </tr>
+            <tr>
+              <td class="website">Redbubble</td>
+              <td class="title">Galaxy T-shirt</td>
+              <td class="band">30 Seconds to mars</td>
+              <td class="link">www.redbubble.com</td>
+              <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
+              <td class="date">02 04 15</td>
+            </tr>
+            <tr>
+              <td class="website">Etsy</td>
+              <td class="title">Galaxy T-shirt</td>
+              <td class="band">Panic at the disco</td>
+              <td class="link">www.etsy.com</td>
+              <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
+              <td class="date">02 04 15</td>
+            </tr>
+            <tr>
+              <td class="website">Etsy</td>
+              <td class="title">T-shirt</td>
+              <td class="band">Panic at the disco</td>
+              <td class="link">www.etsy.com</td>
+              <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
+              <td class="date">02 04 15</td>
+            </tr>
+            <tr>
+              <td class="website">Etsy</td>
+              <td class="title">T-shirt</td>
+              <td class="band">Panic at the disco</td>
+              <td class="link">www.etsy.com</td>
+              <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
+              <td class="date">02 04 15</td>
+            </tr>
+            <tr>
+              <td class="website">Etsy</td>
+              <td class="title">Galaxy T-shirt</td>
+              <td class="band">Panic at the disco</td>
+              <td class="link">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, modi.</p>
+              </td>
+              <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
+              <td class="date">02 04 15</td>
+            </tr>
+          </table><a href="" class="text-link see-more">See more</a>
+        </section>
+      </main>
+      <div id="image-preview-modal" tabindex="-1" role="dialog" class="modal modal-img fade">
+        <div role="document" class="modal-dialog">
+          <div class="modal-content">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
+            <div class="modal-body"><img src="./images/image-preview-example.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

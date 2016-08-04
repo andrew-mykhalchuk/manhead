@@ -1,0 +1,51 @@
+//FontSize
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin fsz($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// Rotate
+@mixin rotate($degree) {
+  -webkit-transform: rotate($degree);
+  -moz-transform: rotate($degree);
+  -ms-transform: rotate($degree);
+  -o-transform: rotate($degree);
+  transform: rotate($degree);
+}
+
+// Calculate Width
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: -o-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+@mixin roundedCorners($size){
+  border-radius: $size + px;  
+}
+
+// Linear Gradient
+@mixin gradient120($bottom, $top) {
+  background: -moz-linear-gradient(120deg, $top 0%, $bottom 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $bottom), color-stop(100%, $top));
+  background: -webkit-linear-gradient(120deg, $top 0%, $bottom 100%);
+  background: -o-linear-gradient(120deg, $top 0%, $bottom 100%);
+  background: -ms-linear-gradient(120deg, $top 0%, $bottom 100%);
+  background: linear-gradient(330deg, $top 0%, $bottom 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bottom', endColorstr='$top', GradientType=0);
+}
+
+
+@mixin gradient($top, $bottom) {
+  background: rgb(222,222,222);
+  background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
+  background: -webkit-linear-gradient(top,  $top 0%, $bottom 100%);
+  background: linear-gradient(to bottom,  $top 0%, $bottom 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom',GradientType=0 );
+}

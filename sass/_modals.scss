@@ -1,0 +1,174 @@
+// Modals
+.modal {
+	.modal-dialog {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		margin: 0;
+		pointer-events: none;
+	}
+	.modal-content {
+		min-width: 300px;
+	  margin: 0 auto;
+	  pointer-events: auto;
+	  border-radius: 2px;
+	  box-shadow: none;
+	}
+	.close {
+		width: 42px;
+		height: 42px;
+		position: absolute;
+		top: -57px;
+		right: -55px;
+		border: 1px solid $white;
+		border-radius: 50%;
+		opacity: 1;
+		&:before,
+		&:after {
+			display: block;
+			content: '';
+			width: 1px;
+			height: 28px;
+			background-color: $white;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+	.modal-body {
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+}
+
+.modal-backdrop {
+	&.in {
+		opacity: .7;
+	}
+}
+
+
+
+// =========================================
+// Modal view image ========================
+// =========================================
+.modal-img {
+	.modal-body {
+		padding: 0;
+	}
+}
+
+
+
+
+// =========================================
+// Modal Edit Contact ======================
+// =========================================
+.modal-contact {
+	.modal-dialog {
+		.modal-content {
+			width: 730px;
+			background-color: $gray-lightest;
+			.modal-body {
+				padding: 15px 130px 55px;
+				position: relative;
+			}
+		}
+	}
+	h2 {
+		margin-bottom: 20px;
+		color: $green;
+		@include fsz(25px);
+		line-height: 30px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.icon-edit {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 66px;
+		height: 66px;
+		background-color: $green;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-top-left-radius: 1px;
+		svg {
+			width: 24px;
+			height: 25px;
+			g {
+				fill:  $white;
+			}
+		}
+	}
+	
+	.form-group {
+		margin-bottom: 25px;
+	}
+	.btn-save {
+		display: block;
+		width: 160px;
+		margin: 10px auto 0;
+	}
+}
+
+
+
+.modal-confirmation {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 15px 75px 15px;
+	background-color: $green;
+	color: $white;
+	@extend .absolute-center;
+	z-index: -1;
+	opacity: 0;
+	transition: $transition;
+	&.active {
+		z-index: auto;
+		opacity: 1;
+	}
+	p {
+		display: inline-block;
+		margin: 0 auto 30px;
+		@include fsz(30px);
+		line-height: 36px;
+		text-transform: uppercase;
+	}
+	.icon-checkmark-circle {
+		display: block;
+		width: 61px;
+		height: 61px;
+		margin: 0 auto;
+		background: url('../images/icon-checkmark-circle.svg') no-repeat center center;
+		&:hover {
+			transform: scale(1.25, 1.25);
+		}
+	}
+}
+
+
+
+
+// =========================================
+// Modal Add Contact =======================
+// =========================================
+.modal-add-contact {
+
+}

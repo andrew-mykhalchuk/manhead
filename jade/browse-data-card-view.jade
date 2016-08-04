@@ -1,0 +1,155 @@
+extends ./templates/base-template
+
+block vars
+	- var title='Manhead - Browse data'
+	- var bodyClass = 'page-browse-data'
+
+block header
+
+block content
+
+	//- Content wrapper
+	.content-container
+		
+		//- Content header
+		.content-header
+			
+			.header-inner
+				h1 Browse data
+				.header-right
+					form.browse-search(action="")
+						.search-wrapper.search-green
+							input.search-field(type="text", placeholder="Search")
+							a.btn-search(href="")
+					a.btn.btn-lg.btn-green(href="") Generate PDF
+
+			//- View options
+			.view-options
+				a.text-link.active(href="browse-data-card-view.html")
+					span Card view
+					i.icon-card-view
+				a.text-link(href="browse-data-list-view.html")
+					span List view
+					i.icon-list-view
+
+			//- Search filters
+			.search-filters
+				.dropdown.sort-by
+					a#dLabel(href="", data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+						| Sort results by
+						span.arrow-down
+					ul.dropdown-menu(aria-labelledby='dLabel')
+						li
+							a(href="") Price
+						li
+							a(href="") Best sellers
+						li
+							a(href="") A-Z
+						li
+							a(href="") Z-A
+				.dropdown.items-visible
+					a#dLabel(href="", data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+						| 60 Per page
+						span.arrow-down
+					ul.dropdown-menu(aria-labelledby='dLabel')
+						li
+							a(href="") 15 Per page
+						li
+							a(href="") 30 Per page
+						li
+							a(href="") All
+
+		//- Sidebar
+		include ./includes/sidebar
+
+		//- Main content
+		main.main-content
+
+			section.item-list
+				ul.card-view
+					li.item-card
+						.img-container
+							img(src="./images/t-shirt-1.jpg", alt="")
+						h3 Galaxy T-Shirt
+						p.source Redbubble
+						a.btn.btn-md.btn-white-green(href="") Select
+					li.item-card.selected
+						.img-container
+							img(src="./images/t-shirt-2.jpg", alt="")
+						h3 Triad T-Shirt
+						p.source Redbubble
+						a.btn.btn-md.btn-white-green(href="") Remove
+					li.item-card
+						.img-container
+							img(src="./images/t-shirt-3.jpg", alt="")
+						h3 Dragon T-Shirt
+						p.source Redbubble
+						a.btn.btn-md.btn-white-green(href="") Select
+					li.item-card.selected
+						.img-container
+							img(src="./images/t-shirt-4.jpg", alt="")
+						h3 Sticker
+						p.source Etsy
+						a.btn.btn-md.btn-white-green(href="") Remove
+					li.item-card
+						.img-container
+							img(src="./images/t-shirt-5.jpg", alt="")
+						h3 Triad T-shirt
+						p.source Redbubble
+						a.btn.btn-md.btn-white-green(href="") Select
+					li.item-card
+						.img-container
+							img(src="./images/t-shirt-6.jpg", alt="")
+						h3 iPhone Case
+						p.source Etsy
+						a.btn.btn-md.btn-white-green(href="") Select
+					li.item-card
+						.img-container
+							img(src="./images/t-shirt-7.jpg", alt="")
+						h3 iPhone Case
+						p.source Etsy
+						a.btn.btn-md.btn-white-green(href="") Select
+					li.item-card
+						.img-container
+							img(src="./images/t-shirt-8.jpg", alt="")
+						h3 T-shirt
+						p.source Redbubble
+						a.btn.btn-md.btn-white-green(href="") Select
+					li.item-card
+						.img-container
+							img(src="./images/t-shirt-1.jpg", alt="")
+						h3 Galaxy T-Shirt
+						p.source Redbubble
+						a.btn.btn-md.btn-white-green(href="") Select
+					li.item-card.selected
+						.img-container
+							img(src="./images/t-shirt-2.jpg", alt="")
+						h3 Triad T-Shirt
+						p.source Redbubble
+						a.btn.btn-md.btn-white-green(href="") Remove
+					li.item-card
+						.img-container
+							img(src="./images/t-shirt-3.jpg", alt="")
+						h3 Dragon T-Shirt
+						p.source Redbubble
+						a.btn.btn-md.btn-white-green(href="") Select
+					li.item-card.selected
+						.img-container
+							img(src="./images/t-shirt-4.jpg", alt="")
+						h3 Sticker
+						p.source Etsy
+						a.btn.btn-md.btn-white-green(href="") Remove
+
+
+
+				a.text-link.see-more(href="") See more
+
+
+
+
+
+block footer
+
+block scripts
+
+block custom-scripts

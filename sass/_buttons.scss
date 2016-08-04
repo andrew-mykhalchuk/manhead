@@ -1,0 +1,103 @@
+@import "_variables.scss";
+
+button {
+	transition: $transition;
+}
+
+
+.btn {
+	display: inline-block;
+	text-transform: uppercase;
+	border-radius: 3px;
+	&:focus {
+		outline: none;
+		outline-offset: initial;
+	}
+}
+
+.btn-md {
+	height: 35px;
+	padding: 11px 28px;
+	font-family: $proxima-s-b;
+	@include fsz(12px);
+	line-height: 12px;
+}
+
+.btn-lg {
+	height: 35px;
+	padding: 11px 28px;
+	font-family: $proxima-s-r;
+	@include fsz(12px);
+	line-height: 12px;
+}
+
+.btn-white {
+	color: $green;
+	background-color: $white;
+	&:hover {
+		color: $white;
+		background-color: $green;
+	}
+}
+
+.btn-white-green {
+	@extend .btn-white;
+	border: 1px solid $green;
+}
+
+.btn-green {
+	color: $white;
+	background-color: $green;
+	border: 1px solid $green;
+	&:hover {
+		color: $green;
+		background-color: $white;
+		border-color: $green;
+	}
+}
+
+
+
+
+
+
+.btn-edit {
+	display: inline-block;
+	width: 14px;
+	height: 15px;
+	background: url('../images/icon-pencil-green.svg') no-repeat center center;
+	&:hover {
+		transform: scale(1.25, 1.25);
+	}
+}
+
+.btn-remove {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 1px solid $green;
+	border-radius: 50%;
+	position: relative;
+	&:hover {
+		transform: scale(1.25, 1.25);
+	}
+	&:before,
+	&:after {
+		display: block;
+		content: '';
+		width: 1px;
+		height: 9px;
+		background-color: $green;
+		@extend .absolute-center;
+	}
+	&:before {
+		transform: rotate(-45deg);
+	}
+	&:after {
+		transform: rotate(45deg);
+	}
+}
+
+
+
+
