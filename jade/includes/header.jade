@@ -1,14 +1,19 @@
+block vars
+	-var current = 'Home'; //default
+
+
+-var nav = { 'Home': '/', 'Archive': '/archive.html', 'Browse Data': '/browse-data-card-view.html', 'Manage Contacts': '/manage-contacts.html' };
+
 header
-	a.logo(href="")
+	a.logo(href="./")
 		img(src="../images/manhead-logo.svg", alt="")
+
 	nav.main-nav
 		ul
-			li
-				a(href="./") Home
-			li
-				a(href="archive.html") Archive
-			li.active
-				a(href="browse-data-card-view.html") Browse data
-			li
-				a(href="manage-contacts.html") Manage contacts
-		a.btn.btn-md.btn-white(href="") Sign out
+			each val, key in nav
+				if current === key
+					li.active
+						a(href=val, title=key)= key
+				else
+					li
+						a(href=val, title=key)= key

@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Manhead - Manage contacts</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-manage-contacts">
-    <header><a href="" class="logo"><img src="../images/manhead-logo.svg" alt=""></a>
+    <header><a href="./" class="logo"><img src="../images/manhead-logo.svg" alt=""></a>
       <nav class="main-nav">
         <ul>
-          <li><a href="./">Home</a></li>
-          <li><a href="archive.html">Archive</a></li>
-          <li class="active"><a href="browse-data-card-view.html">Browse data</a></li>
-          <li><a href="manage-contacts.html">Manage contacts</a></li>
-        </ul><a href="" class="btn btn-md btn-white">Sign out</a>
+          <li><a href="/" title="Home">Home</a></li>
+          <li><a href="/archive.html" title="Archive">Archive</a></li>
+          <li><a href="/browse-data-card-view.html" title="Browse Data">Browse Data</a></li>
+          <li class="active"><a href="/manage-contacts.html" title="Manage Contacts">Manage Contacts</a></li>
+        </ul>
       </nav>
     </header>
     <div class="content-container">
@@ -165,9 +166,10 @@
           <div class="delete-contact-confirmation">
             <table>
               <tr class="tr-confirm">
-                <td colspan="6">
-                  <p>Delete Contact?</p><a href="" title="Delete Contact" class="btn btn-lg btn-green">Yes</a><a href="" title="Cancel" class="btn btn-lg btn-white-green">No</a>
+                <td colspan="5">
+                  <p>Delete Contact?</p><a href="" data-toggle="modal" data-target="#remove-contact-modal" title="Delete Contact" class="btn btn-lg btn-green btn-confirm">Yes</a><a href="" title="Cancel" class="btn btn-lg btn-white-green btn-cancel">No</a>
                 </td>
+                <td></td>
               </tr>
             </table>
           </div><a href="" class="text-link see-more">See more</a>
@@ -279,10 +281,23 @@
           </div>
         </div>
       </div>
+      <div id="remove-contact-modal" tabindex="-1" role="dialog" class="modal modal-contact modal-remove-contact fade">
+        <div role="document" class="modal-dialog">
+          <div class="modal-content">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
+            <div class="modal-body">
+              <div class="modal-confirmation active">
+                <p>Contact Deleted</p><a href="" data-dismiss="modal" aria-label="Close" class="btn-close icon-checkmark-circle"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

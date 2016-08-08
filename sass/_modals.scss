@@ -15,36 +15,6 @@
 	  border-radius: 2px;
 	  box-shadow: none;
 	}
-	.close {
-		width: 42px;
-		height: 42px;
-		position: absolute;
-		top: -57px;
-		right: -55px;
-		border: 1px solid $white;
-		border-radius: 50%;
-		opacity: 1;
-		&:before,
-		&:after {
-			display: block;
-			content: '';
-			width: 1px;
-			height: 28px;
-			background-color: $white;
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			margin: auto;
-		}
-		&:before {
-			transform: rotate(45deg);
-		}
-		&:after {
-			transform: rotate(-45deg);
-		}
-	}
 	.modal-body {
 		img {
 			max-width: 100%;
@@ -56,6 +26,37 @@
 .modal-backdrop {
 	&.in {
 		opacity: .7;
+	}
+}
+
+.close.close {
+	width: 42px;
+	height: 42px;
+	position: absolute;
+	top: -57px;
+	right: -55px;
+	border: 1px solid $white;
+	border-radius: 50%;
+	opacity: 1;
+	&:before,
+	&:after {
+		display: block;
+		content: '';
+		width: 1px;
+		height: 28px;
+		background-color: $white;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+	}
+	&:before {
+		transform: rotate(45deg);
+	}
+	&:after {
+		transform: rotate(-45deg);
 	}
 }
 
@@ -167,8 +168,10 @@
 
 
 // =========================================
-// Modal Add Contact =======================
+// Modal Remove Contact ====================
 // =========================================
-.modal-add-contact {
-
+.modal-remove-contact {
+	.modal-body {
+		min-height: 650px;
+	}
 }

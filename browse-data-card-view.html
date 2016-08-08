@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Manhead - Browse data</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-browse-data">
-    <header><a href="" class="logo"><img src="../images/manhead-logo.svg" alt=""></a>
+    <header><a href="./" class="logo"><img src="../images/manhead-logo.svg" alt=""></a>
       <nav class="main-nav">
         <ul>
-          <li><a href="./">Home</a></li>
-          <li><a href="archive.html">Archive</a></li>
-          <li class="active"><a href="browse-data-card-view.html">Browse data</a></li>
-          <li><a href="manage-contacts.html">Manage contacts</a></li>
-        </ul><a href="" class="btn btn-md btn-white">Sign out</a>
+          <li><a href="/" title="Home">Home</a></li>
+          <li><a href="/archive.html" title="Archive">Archive</a></li>
+          <li class="active"><a href="/browse-data-card-view.html" title="Browse Data">Browse Data</a></li>
+          <li><a href="/manage-contacts.html" title="Manage Contacts">Manage Contacts</a></li>
+        </ul>
       </nav>
     </header>
     <div class="content-container">
@@ -27,7 +28,7 @@
               <div class="search-wrapper search-green">
                 <input type="text" placeholder="Search" class="search-field"><a href="" class="btn-search"></a>
               </div>
-            </form><a href="" class="btn btn-lg btn-green">Generate PDF</a>
+            </form><a href="generate-pdf.html" class="btn btn-lg btn-green">Generate PDF</a>
           </div>
         </div>
         <div class="view-options"><a href="browse-data-card-view.html" class="text-link active"><span>Card view</span><i class="icon-card-view"></i></a><a href="browse-data-list-view.html" class="text-link"><span>List view</span><i class="icon-list-view"></i></a></div>
@@ -181,6 +182,7 @@
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,9 +1,11 @@
 extends ./templates/base-template
 
 block vars
-	- var title='Manhead - Browse data'
-	- var bodyClass = 'page-browse-data'
-
+	-var title='Manhead - Browse data'
+	-var bodyClass = 'page-browse-data'
+	-var current = 'Browse Data'
+	-var baseHeader = true
+	
 block header
 
 block content
@@ -21,7 +23,7 @@ block content
 						.search-wrapper.search-green
 							input.search-field(type="text", placeholder="Search")
 							a.btn-search(href="")
-					a.btn.btn-lg.btn-green(href="") Generate PDF
+					a.btn.btn-lg.btn-green(href="generate-pdf.html") Generate PDF
 
 			//- View options
 			.view-options

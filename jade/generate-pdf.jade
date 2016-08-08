@@ -1,0 +1,208 @@
+extends ./templates/base-template
+
+block vars
+	-var title='Manhead - Generate PDF'
+	-var bodyClass = 'page-generate-pdf'
+	-var current = 'Generate PDF';
+	-var baseHeader = false
+
+block header
+
+block content
+
+	//- Content wrapper
+	.content-container
+		a.close.btn-close-wizard(href="")
+
+
+		//- Main content
+		main.main-content
+			
+
+			#step-1.tab-1.tab-content.current
+				h2 What band would you like to pull data for?
+				ul.radio-list
+					li
+						input#band-item-1(type="radio" name="band" value="30 Seconds to Mars")
+						label(for="band-item-1") 30 Seconds to Mars
+					li
+						input#band-item-2(type="radio" name="band" value="Fall out boy")
+						label(for="band-item-2") Fall out boy
+					li
+						input#band-item-3(type="radio" name="band" value="Panic at the disco")
+						label(for="band-item-3") Panic at the disco
+					li
+						input#band-item-4(type="radio" name="band" value="Lorem ipsum lorem")
+						label(for="band-item-4") Lorem ipsum lorem
+
+				span.btn.btn-md.btn-white-green.btn-next(data-tab="step-2") Next
+				a.btn-cancel(href="") Cancel
+				
+
+			#step-2.tab-2.tab-content
+				h2 From what website?
+				ul.radio-list
+					li
+						input#website-item-1(type="radio" name="band" value="Amazon")
+						label(for="website-item-1") Amazon
+					li
+						input#website-item-2(type="radio" name="band" value="Redbubble")
+						label(for="website-item-2") Redbubble
+					li
+						input#website-item-3(type="radio" name="band" value="Etsy")
+						label(for="website-item-3") Etsy
+				
+				span.btn.btn-md.btn-white-green.btn-next(data-tab="step-2") Next
+				a.btn-cancel(href="") Cancel
+			
+
+			#step-3.tab-3.tab-content
+				h2 We’ve found 7 results that match your selections!
+				
+				a.btn.btn-lg.btn-green.btn-generate-pdf(href="generate-pdf.html") Generate PDF
+
+				section.item-list
+					table.table.table-bordered.list-view
+						tr
+							th
+								a.btn.btn-md.btn-green.btn-check-all(href="") Deselect All
+							th
+								a(href="")
+									span Website
+									i.arrow-down
+							th.sort-by
+								a(href="")
+									span Title
+									i.arrow-down
+							th
+								a(href="")
+									span Band
+									i.arrow-down
+							th
+								a(href="")
+									span Link
+									i.arrow-down
+							th
+								a(href="")
+									span Image
+									i.arrow-down
+							th
+								a(href="")
+									span Date
+									i.arrow-down
+						tr
+							td.check
+								label.control.control--checkbox
+									input(type='checkbox', checked)
+									.control__indicator
+							td.website Amazon
+							td.title Triad T-Shirt
+							td.band 30 Seconds to mars
+							td.link www.amazon.com/t-shirts/
+							td.image
+								a(href="", data-toggle="modal" data-target="#image-preview-modal")
+									i.icon-img-placeholder
+							td.date 02 04 15
+						tr
+							td.check
+								label.control.control--checkbox
+									input(type='checkbox', checked)
+									.control__indicator
+							td.website Redbubble
+							td.title iPhone Case/Skin
+							td.band 30 Seconds to mars
+							td.link www.redbubble.com
+							td.image
+								a(href="", data-toggle="modal" data-target="#image-preview-modal")
+									i.icon-img-placeholder
+							td.date 02 04 15
+						tr
+							td.check
+								label.control.control--checkbox
+									input(type='checkbox', checked)
+									.control__indicator
+							td.website Redbubble
+							td.title Galaxy T-shirt
+							td.band 30 Seconds to mars
+							td.link www.redbubble.com
+							td.image
+								a(href="", data-toggle="modal" data-target="#image-preview-modal")
+									i.icon-img-placeholder
+							td.date 02 04 15
+						tr
+							td.check
+								label.control.control--checkbox
+									input(type='checkbox', checked)
+									.control__indicator
+							td.website Etsy
+							td.title Galaxy T-shirt
+							td.band Panic at the disco
+							td.link www.etsy.com
+							td.image
+								a(href="", data-toggle="modal" data-target="#image-preview-modal")
+									i.icon-img-placeholder
+							td.date 02 04 15
+						tr
+							td.check
+								label.control.control--checkbox
+									input(type='checkbox', checked)
+									.control__indicator
+							td.website Etsy
+							td.title T-shirt
+							td.band Panic at the disco
+							td.link www.etsy.com
+							td.image
+								a(href="", data-toggle="modal" data-target="#image-preview-modal")
+									i.icon-img-placeholder
+							td.date 02 04 15
+						tr
+							td.check
+								label.control.control--checkbox
+									input(type='checkbox', checked)
+									.control__indicator
+							td.website Etsy
+							td.title T-shirt
+							td.band Panic at the disco
+							td.link www.etsy.com
+							td.image
+								a(href="", data-toggle="modal" data-target="#image-preview-modal")
+									i.icon-img-placeholder
+							td.date 02 04 15
+						tr
+							td.check
+								label.control.control--checkbox
+									input(type='checkbox', checked)
+									.control__indicator
+							td.website Etsy
+							td.title Galaxy T-shirt
+							td.band Panic at the disco
+							td.link
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, modi.
+							td.image
+								a(href="", data-toggle="modal" data-target="#image-preview-modal")
+									i.icon-img-placeholder
+							td.date 02 04 15
+
+				a.btn-cancel(href="") Previous step
+
+			#step-4.tab-4.tab-content
+				h2 Tab 4
+
+			#step-5.tab-5.tab-content
+				h2 Tab 5
+			
+			
+
+		.modal.modal-img.fade#image-preview-modal(tabindex='-1', role='dialog')
+			.modal-dialog(role='document')
+				.modal-content
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+					.modal-body
+						img(src="./images/image-preview-example.jpg", alt="")
+
+
+block footer
+
+block scripts
+
+block custom-scripts

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manhead - Generate PDF</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="page-generate-pdf">
+    <header><a href="./" class="logo"><img src="../images/manhead-logo.svg" alt=""></a>
+      <ul class="tabs">
+        <li data-tab="step-1" class="tab-link current">1</li>
+        <li data-tab="step-2" class="tab-link">2</li>
+        <li data-tab="step-3" class="tab-link">3</li>
+        <li data-tab="step-4" class="tab-link">4</li>
+        <li data-tab="step-5" class="tab-link">5</li>
+      </ul>
+    </header>
+    <div class="content-container"><a href="" class="close btn-close-wizard"></a>
+      <main class="main-content">
+        <div id="step-1" class="tab-1 tab-content current">
+          <h2>What band would you like to pull data for?</h2>
+          <ul class="radio-list">
+            <li>
+              <input id="band-item-1" type="radio" name="band" value="30 Seconds to Mars">
+              <label for="band-item-1">30 Seconds to Mars</label>
+            </li>
+            <li>
+              <input id="band-item-2" type="radio" name="band" value="Fall out boy">
+              <label for="band-item-2">Fall out boy</label>
+            </li>
+            <li>
+              <input id="band-item-3" type="radio" name="band" value="Panic at the disco">
+              <label for="band-item-3">Panic at the disco</label>
+            </li>
+            <li>
+              <input id="band-item-4" type="radio" name="band" value="Lorem ipsum lorem">
+              <label for="band-item-4">Lorem ipsum lorem</label>
+            </li>
+          </ul><span data-tab="step-2" class="btn btn-md btn-white-green btn-next">Next</span><a href="" class="btn-cancel">Cancel</a>
+        </div>
+        <div id="step-2" class="tab-2 tab-content">
+          <h2>From what website?</h2>
+          <ul class="radio-list">
+            <li>
+              <input id="website-item-1" type="radio" name="band" value="Amazon">
+              <label for="website-item-1">Amazon</label>
+            </li>
+            <li>
+              <input id="website-item-2" type="radio" name="band" value="Redbubble">
+              <label for="website-item-2">Redbubble</label>
+            </li>
+            <li>
+              <input id="website-item-3" type="radio" name="band" value="Etsy">
+              <label for="website-item-3">Etsy</label>
+            </li>
+          </ul><span data-tab="step-2" class="btn btn-md btn-white-green btn-next">Next</span><a href="" class="btn-cancel">Cancel</a>
+        </div>
+        <div id="step-3" class="tab-3 tab-content">
+          <h2>We’ve found 7 results that match your selections!</h2><a href="generate-pdf.html" class="btn btn-lg btn-green btn-generate-pdf">Generate PDF</a>
+          <section class="item-list">
+            <table class="table table-bordered list-view">
+              <tr>
+                <th><a href="" class="btn btn-md btn-green btn-check-all">Deselect All</a></th>
+                <th><a href=""><span>Website</span><i class="arrow-down"></i></a></th>
+                <th class="sort-by"><a href=""><span>Title</span><i class="arrow-down"></i></a></th>
+                <th><a href=""><span>Band</span><i class="arrow-down"></i></a></th>
+                <th><a href=""><span>Link</span><i class="arrow-down"></i></a></th>
+                <th><a href=""><span>Image</span><i class="arrow-down"></i></a></th>
+                <th><a href=""><span>Date</span><i class="arrow-down"></i></a></th>
+              </tr>
+              <tr>
+                <td class="check">
+                  <label class="control control--checkbox">
+                    <input type="checkbox" checked>
+                    <div class="control__indicator"></div>
+                  </label>
+                </td>
+                <td class="website">Amazon</td>
+                <td class="title">Triad T-Shirt</td>
+                <td class="band">30 Seconds to mars</td>
+                <td class="link">www.amazon.com/t-shirts/</td>
+                <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
+                <td class="date">02 04 15</td>
+              </tr>
+              <tr>
+                <td class="check">
+                  <label class="control control--checkbox">
+                    <input type="checkbox" checked>
+                    <div class="control__indicator"></div>
+                  </label>
+                </td>
+                <td class="website">Redbubble</td>
+                <td class="title">iPhone Case/Skin</td>
+                <td class="band">30 Seconds to mars</td>
+                <td class="link">www.redbubble.com</td>
+                <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
+                <td class="date">02 04 15</td>
+              </tr>
+              <tr>
+                <td class="check">
+                  <label class="control control--checkbox">
+                    <input type="checkbox" checked>
+                    <div class="control__indicator"></div>
+                  </label>
+                </td>
+                <td class="website">Redbubble</td>
+                <td class="title">Galaxy T-shirt</td>
+                <td class="band">30 Seconds to mars</td>
+                <td class="link">www.redbubble.com</td>
+                <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
+                <td class="date">02 04 15</td>
+              </tr>
+              <tr>
+                <td class="check">
+                  <label class="control control--checkbox">
+                    <input type="checkbox" checked>
+                    <div class="control__indicator"></div>
+                  </label>
+                </td>
+                <td class="website">Etsy</td>
+                <td class="title">Galaxy T-shirt</td>
+                <td class="band">Panic at the disco</td>
+                <td class="link">www.etsy.com</td>
+                <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
+                <td class="date">02 04 15</td>
+              </tr>
+              <tr>
+                <td class="check">
+                  <label class="control control--checkbox">
+                    <input type="checkbox" checked>
+                    <div class="control__indicator"></div>
+                  </label>
+                </td>
+                <td class="website">Etsy</td>
+                <td class="title">T-shirt</td>
+                <td class="band">Panic at the disco</td>
+                <td class="link">www.etsy.com</td>
+                <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
+                <td class="date">02 04 15</td>
+              </tr>
+              <tr>
+                <td class="check">
+                  <label class="control control--checkbox">
+                    <input type="checkbox" checked>
+                    <div class="control__indicator"></div>
+                  </label>
+                </td>
+                <td class="website">Etsy</td>
+                <td class="title">T-shirt</td>
+                <td class="band">Panic at the disco</td>
+                <td class="link">www.etsy.com</td>
+                <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
+                <td class="date">02 04 15</td>
+              </tr>
+              <tr>
+                <td class="check">
+                  <label class="control control--checkbox">
+                    <input type="checkbox" checked>
+                    <div class="control__indicator"></div>
+                  </label>
+                </td>
+                <td class="website">Etsy</td>
+                <td class="title">Galaxy T-shirt</td>
+                <td class="band">Panic at the disco</td>
+                <td class="link">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, modi.</p>
+                </td>
+                <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
+                <td class="date">02 04 15</td>
+              </tr>
+            </table>
+          </section><a href="" class="btn-cancel">Previous step</a>
+        </div>
+        <div id="step-4" class="tab-4 tab-content">
+          <h2>Tab 4</h2>
+        </div>
+        <div id="step-5" class="tab-5 tab-content">
+          <h2>Tab 5</h2>
+        </div>
+      </main>
+      <div id="image-preview-modal" tabindex="-1" role="dialog" class="modal modal-img fade">
+        <div role="document" class="modal-dialog">
+          <div class="modal-content">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
+            <div class="modal-body"><img src="./images/image-preview-example.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

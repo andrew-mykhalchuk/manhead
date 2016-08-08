@@ -1,13 +1,17 @@
 @import '_bootstrap';
-@import '_fonts';
+
 @import '_variables';
 @import '_mixins';
-@import '_global';
-@import '_helpers';
-@import '_buttons';
-@import '_custom-checkbox';
+
 @import './bootstrap-select/bootstrap-select';
+@import '_custom-checkbox';
+
+@import '_fonts';
+@import '_helpers';
+@import '_global';
+@import '_buttons';
 @import '_modals';
+
 
 
 
@@ -312,7 +316,6 @@
 		margin-bottom: 50px;
 	}
 
-
 	tr.confirm-dialog {
 		position: relative;
 		.delete-contact-confirmation {
@@ -320,44 +323,213 @@
 		}
 	}
 
-	// .delete-contact-confirmation {
-	
-	// }
+	.delete-contact-confirmation {
+		display: none;
+	}
 }
 
-.tr-confirm {
-	// display: table-row;
-	td {
-		// justify-content: flex-end;
-		// align-items: center;
-		min-height: 50px;
-		background-color: $gray-lightest;
-		// position: absolute;
-		// top: 0;
-		// right: 0;
-		// bottom: 0;
-		// left: 0;
-		// margin: auto;
-		padding: 5px 180px 5px 15px;
-		p {
-			display: inline-block;
-			vertical-align: middle;
-			margin: 0 30px 0 0;
-			@include fsz(14px);
-			line-height: 17px;
-			color: $green;
-			text-transform: uppercase;
-		}
-		.btn {
-			display: inline-block;
-			vertical-align: middle;
-			width: 160px;
-			&:not(:last-of-type) {
-				margin-right: 15px;
+
+.table {
+	.confirm-dialog {
+		display: none;
+	}
+
+	.tr-confirm {
+		td {
+			min-height: 50px;
+			padding: 5px 0 5px 15px;
+			background-color: $gray-lightest;
+			text-align: right;
+			&:first-child {
+				border-right: 0;
+			}
+			&:last-child {
+				border-left: 0;
+			}
+			p {
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 30px 0 0;
+				@include fsz(14px);
+				line-height: 17px;
+				color: $green;
+				text-transform: uppercase;
+			}
+			.btn {
+				display: inline-block;
+				vertical-align: middle;
+				width: 160px;
+				&:not(:last-of-type) {
+					margin-right: 15px;
+				}
 			}
 		}
 	}
 }
+
+
+
+
+// =========================================
+// Page Archive ============================
+// =========================================
+.page-archive {
+	.action-bar {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		padding: 25px 0;
+	}
+
+	.card-list {
+		margin-bottom: 30px;
+	}
+
+	.table-archive {
+		tr {
+			th {
+				&:last-child {
+					padding-left: 8px;
+					a {
+						span {
+							display: block;
+							margin: 0 auto;
+						}
+					}
+				}
+			}
+			td {
+				&:last-child {
+					padding-left: 8px;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+// =========================================
+// Page Generate PDF =======================
+// =========================================
+.page-generate-pdf {
+	header {
+		position: relative;
+	}
+
+
+	.tab-content {
+		padding-top: 125px;
+		padding-bottom: 80px;
+	}
+
+		
+	.tab-1,
+	.tab-2 {
+		h2 {
+			margin-bottom: 145px;
+		}
+		.radio-list {
+			margin-bottom: 60px;
+		}
+	}
+
+	.tab-3 {
+		h2 {
+			margin-bottom: 45px;
+		}
+		
+		.btn-generate-pdf {
+			margin-bottom: 50px;
+		}
+
+		.table {
+			
+			.btn-check-all {
+				justify-content: center;
+				width: 115px;
+				@include fsz(12px);
+				line-height: 12px;
+				font-weight: 400;
+				color: $white;
+			}
+			.check {
+				text-align: center;
+				.control {
+					input {
+						&:checked ~ .control__indicator {
+							background-color: rgba(57, 208, 174, 0.6);
+						}
+					}
+				}
+				.control__indicator {
+					width: 23px;
+					height: 23px;
+
+				}
+			}
+		}
+	}
+
+
+	.btn {
+		display: block;
+		width: 160px;
+		margin: 0 auto;
+		transition:  $transition;
+	}
+	.btn-next {
+		margin-bottom: 25px;
+	}
+	.btn-cancel {
+		@include fsz(12px);
+		line-height: 14px;
+		color: #9b9b9b;
+		text-transform: uppercase;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,161 @@
+extends ./templates/base-template
+
+block vars
+	-var title='Manhead - Archive'
+	-var bodyClass = 'page-archive'
+	-var current = 'Archive';
+	-var baseHeader = true
+
+block header
+
+block content
+
+	//- Content wrapper
+	.content-container
+		
+		//- Content header
+		.content-header
+			
+			.header-inner
+				h1 Archive
+				.header-right
+					form.browse-search(action="")
+						.search-wrapper.search-green
+							input.search-field(type="text", placeholder="Search")
+							a.btn-search(href="", title="Search")
+
+
+		//- Sidebar
+		include ./includes/sidebar
+
+		//- Main content
+		main.main-content
+			
+			.top-picks
+				.action-bar
+					select#sort-by.selectpicker.select-filter.text-green(name="")
+						option(value="Most recent") Most recent
+						option(value="Name A-Z") Name A-Z
+						option(value="Name Z-A") Name Z-A
+						option(value="Best sellers") Best sellers
+					.date-picker
+						input(type="text", value="March 22, 2016")
+						span.caret
+				
+				ul.card-list
+					li
+						img(src="./images/icon-document.svg", alt="")
+						h4 Redbubble
+						p 30 Seconds to mars
+						span.date 03 04 15
+					li
+						img(src="./images/icon-document.svg", alt="")
+						h4 Amazon
+						p 30 Seconds to mars
+						span.date 03 04 15
+					li
+						img(src="./images/icon-document.svg", alt="")
+						h4 Etsy
+						p Panic at the disco
+						span.date 03 04 15
+
+
+			section.item-list
+				table.table.table-bordered.table-archive.list-view
+					tr
+						th.sort-by
+							a(href="")
+								span Date
+								i.arrow-down
+						th
+							a(href="")
+								span Website
+								i.arrow-down
+						th
+							a(href="")
+								span Band
+								i.arrow-down
+						th
+							a(href="")
+								span Contact
+								i.arrow-down
+						th
+							a(href="")
+								span Report
+								//- i.arrow-down
+					tr
+						td.date 03 04 15
+						td.website Amazon
+						td.band 30 Seconds to mars
+						td.contact John Nier
+						td.report
+							a(href="")
+								img(src="./images/icon-document.svg", width="27px", height="33px" alt="")
+					tr
+						td.date 03 04 15
+						td.website Amazon
+						td.band 30 Seconds to mars
+						td.contact Brady Camel
+						td.report
+							a(href="")
+								img(src="./images/icon-document.svg", width="27px", height="33px" alt="")
+					tr
+						td.date 03 04 15
+						td.website Redbubble
+						td.band 30 Seconds to mars
+						td.contact Laura Stone
+						td.report
+							a(href="")
+								img(src="./images/icon-document.svg", width="27px", height="33px" alt="")
+					tr
+						td.date 03 04 15
+						td.website Redbubble
+						td.band Panic at the disco
+						td.contact Jean Farraway
+						td.report
+							a(href="")
+								img(src="./images/icon-document.svg", width="27px", height="33px" alt="")
+					tr
+						td.date 03 04 15
+						td.website Etsy
+						td.band Panic at the disco
+						td.contact John Niere
+						td.report
+							a(href="")
+								img(src="./images/icon-document.svg", width="27px", height="33px" alt="")
+					tr
+						td.date 03 04 15
+						td.website Etsy
+						td.band Panic at the disco
+						td.contact Brady Schultz
+						td.report
+							a(href="")
+								img(src="./images/icon-document.svg", width="27px", height="33px" alt="")
+					tr
+						td.date 03 04 15
+						td.website Etsy
+						td.band 30 Seconds to mars
+						td.contact John Nier
+						td.report
+							a(href="")
+								img(src="./images/icon-document.svg", width="27px", height="33px" alt="")
+
+
+			
+				a.text-link.see-more(href="") See more
+
+
+
+
+block footer
+
+block scripts
+
+block custom-scripts
+	script
+		| $('.date-picker input').datepicker({
+		| format: "MM dd, yyyy",
+		| orientation: "bottom auto",
+		| todayHighlight: true,
+		| autoclose: true
+		| });

@@ -1,9 +1,11 @@
 extends ./templates/base-template
 
 block vars
-	- var title='Manhead - Manage contacts'
-	- var bodyClass = 'page-manage-contacts'
-
+	-var title='Manhead - Manage contacts'
+	-var bodyClass = 'page-manage-contacts'
+	-var current = 'Manage Contacts'
+	-var baseHeader = true
+	
 block header
 
 block content
@@ -125,10 +127,11 @@ block content
 				.delete-contact-confirmation
 					table
 						tr.tr-confirm
-							td(colspan="6")
+							td(colspan="5")
 								p Delete Contact?
-								a.btn.btn-lg.btn-green(href="", title="Delete Contact") Yes
-								a.btn.btn-lg.btn-white-green(href="", title="Cancel") No
+								a.btn.btn-lg.btn-green.btn-confirm(href="", data-toggle="modal", data-target="#remove-contact-modal", title="Delete Contact") Yes
+								a.btn.btn-lg.btn-white-green.btn-cancel(href="", title="Cancel") No
+							td
 
 
 				a.text-link.see-more(href="") See more
@@ -230,6 +233,19 @@ block content
 						.modal-confirmation
 							p Contact Added
 							a.btn-close.icon-checkmark-circle(href="", data-dismiss='modal', aria-label='Close')
+
+
+		//- Modal Add Contact
+		.modal.modal-contact.modal-remove-contact.fade#remove-contact-modal(tabindex='-1', role='dialog')
+			.modal-dialog(role='document')
+				.modal-content
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+					.modal-body
+						//- Modal confirmation screen
+						.modal-confirmation.active
+							p Contact Deleted
+							a.btn-close.icon-checkmark-circle(href="", data-dismiss='modal', aria-label='Close')
+
 
 block footer
 

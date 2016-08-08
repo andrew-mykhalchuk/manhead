@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Manhead - Browse data</title>
+    <title>Manhead - Archive</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page-browse-data">
+  <body class="page-archive">
     <header><a href="./" class="logo"><img src="../images/manhead-logo.svg" alt=""></a>
       <nav class="main-nav">
         <ul>
           <li><a href="/" title="Home">Home</a></li>
-          <li><a href="/archive.html" title="Archive">Archive</a></li>
-          <li class="active"><a href="/browse-data-card-view.html" title="Browse Data">Browse Data</a></li>
+          <li class="active"><a href="/archive.html" title="Archive">Archive</a></li>
+          <li><a href="/browse-data-card-view.html" title="Browse Data">Browse Data</a></li>
           <li><a href="/manage-contacts.html" title="Manage Contacts">Manage Contacts</a></li>
         </ul>
       </nav>
@@ -22,16 +22,15 @@
     <div class="content-container">
       <div class="content-header">
         <div class="header-inner">
-          <h1>Browse data</h1>
+          <h1>Archive</h1>
           <div class="header-right">
             <form action="" class="browse-search">
               <div class="search-wrapper search-green">
-                <input type="text" placeholder="Search" class="search-field"><a href="" class="btn-search"></a>
+                <input type="text" placeholder="Search" class="search-field"><a href="" title="Search" class="btn-search"></a>
               </div>
-            </form><a href="generate-pdf.html" class="btn btn-lg btn-green">Generate PDF</a>
+            </form>
           </div>
         </div>
-        <div class="view-options"><a href="browse-data-card-view.html" class="text-link"><span>Card view</span><i class="icon-card-view"></i></a><a href="browse-data-list-view.html" class="text-link active"><span>List view</span><i class="icon-list-view"></i></a></div>
       </div>
       <aside>
         <div class="panel panel-gray">
@@ -96,90 +95,107 @@
         </div>
       </aside>
       <main class="main-content">
+        <div class="top-picks">
+          <div class="action-bar">
+            <select id="sort-by" name="" class="selectpicker select-filter text-green">
+              <option value="Most recent">Most recent</option>
+              <option value="Name A-Z">Name A-Z</option>
+              <option value="Name Z-A">Name Z-A</option>
+              <option value="Best sellers">Best sellers</option>
+            </select>
+            <div class="date-picker">
+              <input type="text" value="March 22, 2016"><span class="caret"></span>
+            </div>
+          </div>
+          <ul class="card-list">
+            <li><img src="./images/icon-document.svg" alt="">
+              <h4>Redbubble</h4>
+              <p>30 Seconds to mars</p><span class="date">03 04 15</span>
+            </li>
+            <li><img src="./images/icon-document.svg" alt="">
+              <h4>Amazon</h4>
+              <p>30 Seconds to mars</p><span class="date">03 04 15</span>
+            </li>
+            <li><img src="./images/icon-document.svg" alt="">
+              <h4>Etsy</h4>
+              <p>Panic at the disco</p><span class="date">03 04 15</span>
+            </li>
+          </ul>
+        </div>
         <section class="item-list">
-          <table class="table table-bordered list-view">
+          <table class="table table-bordered table-archive list-view">
             <tr>
+              <th class="sort-by"><a href=""><span>Date</span><i class="arrow-down"></i></a></th>
               <th><a href=""><span>Website</span><i class="arrow-down"></i></a></th>
-              <th class="sort-by"><a href=""><span>Title</span><i class="arrow-down"></i></a></th>
               <th><a href=""><span>Band</span><i class="arrow-down"></i></a></th>
-              <th><a href=""><span>Link</span><i class="arrow-down"></i></a></th>
-              <th><a href=""><span>Image</span><i class="arrow-down"></i></a></th>
-              <th><a href=""><span>Date</span><i class="arrow-down"></i></a></th>
+              <th><a href=""><span>Contact</span><i class="arrow-down"></i></a></th>
+              <th><a href=""><span>Report</span></a></th>
             </tr>
             <tr>
+              <td class="date">03 04 15</td>
               <td class="website">Amazon</td>
-              <td class="title">Triad T-Shirt</td>
               <td class="band">30 Seconds to mars</td>
-              <td class="link">www.amazon.com/t-shirts/</td>
-              <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
-              <td class="date">02 04 15</td>
+              <td class="contact">John Nier</td>
+              <td class="report"><a href=""><img src="./images/icon-document.svg" width="27px" height="33px" alt=""></a></td>
             </tr>
             <tr>
+              <td class="date">03 04 15</td>
+              <td class="website">Amazon</td>
+              <td class="band">30 Seconds to mars</td>
+              <td class="contact">Brady Camel</td>
+              <td class="report"><a href=""><img src="./images/icon-document.svg" width="27px" height="33px" alt=""></a></td>
+            </tr>
+            <tr>
+              <td class="date">03 04 15</td>
               <td class="website">Redbubble</td>
-              <td class="title">iPhone Case/Skin</td>
               <td class="band">30 Seconds to mars</td>
-              <td class="link">www.redbubble.com</td>
-              <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
-              <td class="date">02 04 15</td>
+              <td class="contact">Laura Stone</td>
+              <td class="report"><a href=""><img src="./images/icon-document.svg" width="27px" height="33px" alt=""></a></td>
             </tr>
             <tr>
+              <td class="date">03 04 15</td>
               <td class="website">Redbubble</td>
-              <td class="title">Galaxy T-shirt</td>
+              <td class="band">Panic at the disco</td>
+              <td class="contact">Jean Farraway</td>
+              <td class="report"><a href=""><img src="./images/icon-document.svg" width="27px" height="33px" alt=""></a></td>
+            </tr>
+            <tr>
+              <td class="date">03 04 15</td>
+              <td class="website">Etsy</td>
+              <td class="band">Panic at the disco</td>
+              <td class="contact">John Niere</td>
+              <td class="report"><a href=""><img src="./images/icon-document.svg" width="27px" height="33px" alt=""></a></td>
+            </tr>
+            <tr>
+              <td class="date">03 04 15</td>
+              <td class="website">Etsy</td>
+              <td class="band">Panic at the disco</td>
+              <td class="contact">Brady Schultz</td>
+              <td class="report"><a href=""><img src="./images/icon-document.svg" width="27px" height="33px" alt=""></a></td>
+            </tr>
+            <tr>
+              <td class="date">03 04 15</td>
+              <td class="website">Etsy</td>
               <td class="band">30 Seconds to mars</td>
-              <td class="link">www.redbubble.com</td>
-              <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
-              <td class="date">02 04 15</td>
-            </tr>
-            <tr>
-              <td class="website">Etsy</td>
-              <td class="title">Galaxy T-shirt</td>
-              <td class="band">Panic at the disco</td>
-              <td class="link">www.etsy.com</td>
-              <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
-              <td class="date">02 04 15</td>
-            </tr>
-            <tr>
-              <td class="website">Etsy</td>
-              <td class="title">T-shirt</td>
-              <td class="band">Panic at the disco</td>
-              <td class="link">www.etsy.com</td>
-              <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
-              <td class="date">02 04 15</td>
-            </tr>
-            <tr>
-              <td class="website">Etsy</td>
-              <td class="title">T-shirt</td>
-              <td class="band">Panic at the disco</td>
-              <td class="link">www.etsy.com</td>
-              <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
-              <td class="date">02 04 15</td>
-            </tr>
-            <tr>
-              <td class="website">Etsy</td>
-              <td class="title">Galaxy T-shirt</td>
-              <td class="band">Panic at the disco</td>
-              <td class="link">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, modi.</p>
-              </td>
-              <td class="image"><a href="" data-toggle="modal" data-target="#image-preview-modal"><i class="icon-img-placeholder"></i></a></td>
-              <td class="date">02 04 15</td>
+              <td class="contact">John Nier</td>
+              <td class="report"><a href=""><img src="./images/icon-document.svg" width="27px" height="33px" alt=""></a></td>
             </tr>
           </table><a href="" class="text-link see-more">See more</a>
         </section>
       </main>
-      <div id="image-preview-modal" tabindex="-1" role="dialog" class="modal modal-img fade">
-        <div role="document" class="modal-dialog">
-          <div class="modal-content">
-            <button type="button" data-dismiss="modal" aria-label="Close" class="close"></button>
-            <div class="modal-body"><img src="./images/image-preview-example.jpg" alt=""></div>
-          </div>
-        </div>
-      </div>
     </div>
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-select.min.js"></script>
     <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      $('.date-picker input').datepicker({
+      format: "MM dd, yyyy",
+      orientation: "bottom auto",
+      todayHighlight: true,
+      autoclose: true
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,30 @@
+block vars
+	-var current = 'Home'; //default
+
+
+-var nav = { 'Home': '/', 'Archive': '/archive.html', 'Browse Data': '/browse-data-card-view.html', 'Manage Contacts': '/manage-contacts.html' };
+
+header
+	a.logo(href="./")
+		img(src="../images/manhead-logo.svg", alt="")
+
+
+	ul.tabs
+		li.tab-link.current(data-tab="step-1") 1
+		li.tab-link(data-tab="step-2") 2
+		li.tab-link(data-tab="step-3") 3
+		li.tab-link(data-tab="step-4") 4
+		li.tab-link(data-tab="step-5") 5
+
+
+
+
+	//- nav.main-nav
+	//- 	ul
+	//- 		each val, key in nav
+	//- 			if current === key
+	//- 				li.active
+	//- 					a(href=val, title=key)= key
+	//- 			else
+	//- 				li
+	//- 					a(href=val, title=key)= key

@@ -29,18 +29,49 @@ $(document).ready(function() {
 
   	var _this = $(this),
   			confDialog = _this.parents('.table-contacts').siblings('.delete-contact-confirmation'),
-  			row = _this.parents('tr');
+  			row = _this.closest('tr');
 
-  	// console.log(confDialog);
-
+  	// Hide current row
   	row.addClass('confirm-dialog');
-  	// row.hide();
-  	confDialog.find('tr').insertAfter(row);
+
+  	// Insert confirmation row
+  	confDialog.find('tr').clone().insertAfter(row);
 
   	
+  	var insertedRow = _this.closest('tr').next('.tr-confirm');
+  	
+  	// Confirm removal
+  	insertedRow.find('.btn-confirm').on('click', function(e){
+  		e.preventDefault();
+
+  		insertedRow.remove();
+  		row.remove();
+  	});
+
+
+  	// Cancel removal
+  	insertedRow.find('.btn-cancel').on('click', function(e){
+  		e.preventDefault();
+  		
+  		insertedRow.remove();
+  		row.removeClass('confirm-dialog');
+  	});
 
   });
 
+});
+
+
+// Tabs
+$(document).ready(function() {
+  $('ul.tabs li').click(function() {
+    var tab_id = $(this).attr('data-tab');
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').removeClass('current');
+
+    $(this).addClass('current');
+    $("#" + tab_id).addClass('current');
+  })
 });
 
 
