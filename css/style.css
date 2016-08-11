@@ -4566,63 +4566,12 @@ select.selectpicker {
   display: none !important;
 }
 
+.text-green {
+  color: #39D0AE;
+}
+
 .text-black {
   color: #000;
-}
-
-.checkbox-label {
-  display: inline-block;
-  width: 97px;
-  height: 30px;
-  padding: 7px 55px 7px 10px;
-  position: relative;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 15px;
-  cursor: pointer;
-  border: 1px solid #00A4D1;
-  border-radius: 4px;
-}
-
-.checkbox-label:before, .checkbox-label:after {
-  display: block;
-  content: ' ';
-  position: absolute;
-  transition: all 0.25s ease-out;
-}
-
-.checkbox-label:before {
-  width: 48px;
-  height: 28px;
-  background-color: #ccc;
-  top: 0;
-  right: 0;
-  border-radius: 3px;
-}
-
-.checkbox-label:after {
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  top: 4px;
-  right: 24px;
-  border-radius: 2px;
-}
-
-.checkbox:checked ~ .checkbox-label:before,
-.checkbox:checked ~ * .checkbox-label:before {
-  background: #00A4D1;
-}
-
-.checkbox:checked ~ .checkbox-label:after,
-.checkbox:checked ~ * .checkbox-label:after {
-  right: 4px;
-}
-
-.checkbox,
-.expandable {
-  display: none;
 }
 
 * {
@@ -4680,6 +4629,7 @@ header {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  min-width: 1325px;
   height: 128px;
   background-color: #000;
   padding: 38px 50px 38px 118px;
@@ -4888,6 +4838,15 @@ header {
           transform: rotate(-45deg);
   top: 18px;
   left: 20px;
+}
+
+.results-count {
+  margin-top: 37px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 19px;
+  color: #4a4a4a;
 }
 
 .search-filters {
@@ -5367,7 +5326,7 @@ form.form-green .bs-caret .caret {
   margin: auto;
 }
 
-.tabs li {
+.tabs .tab-link {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -5379,21 +5338,27 @@ form.form-green .bs-caret .caret {
           align-items: center;
   width: 36px;
   height: 36px;
-  background-color: #fff;
+  background-color: #ebebeb;
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 25px;
-  color: #39D0AE;
+  color: #fff;
   cursor: pointer;
   border: 2px solid #ebebeb;
   border-radius: 50%;
   position: relative;
+  transition: all 0.25s ease-out;
 }
 
-.tabs li.current {
+.tabs .tab-link.current {
   background-color: #39D0AE;
   border-color: #39D0AE;
   color: #fff;
+}
+
+.tabs .tab-link.current ~ .tab-link {
+  background-color: #fff;
+  color: #39D0AE;
 }
 
 .tab-content {
@@ -5437,7 +5402,7 @@ form.form-green .bs-caret .caret {
   width: 203px;
   height: 203px;
   margin: 0 20px;
-  padding: 90px 15px 15px 15px;
+  padding: 90px 10px 15px 10px;
   background-color: #fafafa;
   font-size: 25px;
   font-size: 1.5625rem;
@@ -5465,6 +5430,44 @@ form.form-green .bs-caret .caret {
   right: 0;
   left: 0;
   margin: auto;
+}
+
+.radio-list li label span {
+  display: block;
+  margin-top: 23px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 17px;
+}
+
+.square-cards {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.square-cards .square-item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 203px;
+  height: 203px;
+  background-color: #fafafa;
+  border: 1px solid #ebebeb;
+  border-radius: 2px;
+}
+
+.square-cards .square-item:not(:last-of-type) {
+  margin-right: 40px;
 }
 
 .date-picker {
@@ -5555,6 +5558,67 @@ form.form-green .bs-caret .caret {
 .datepicker table tr td.today:hover[disabled],
 .datepicker table tr td.today[disabled] {
   background-color: #39D0AE;
+}
+
+.well-item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 670px;
+  min-height: 70px;
+  margin: 0 auto 25px;
+  padding: 20px;
+  background-color: #fafafa;
+  color: #9b9b9b;
+  border: 1px solid #ebebeb;
+  border-radius: 2px;
+  position: relative;
+}
+
+.well-item .well-label {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  position: absolute;
+  top: 28px;
+  left: 23px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.well-item .well-title {
+  margin: 0;
+  font-size: 25px;
+  font-size: 1.5625rem;
+  line-height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.well-item .well-item-content {
+  margin-top: 50px;
+  padding: 0 25px;
+  text-align: justify;
+}
+
+.well-item .well-item-content p {
+  margin-top: 0;
+  color: #9b9b9b;
+  font-size: 11px;
+  font-size: 0.6875rem;
+  line-height: 13px;
 }
 
 button {
@@ -6184,6 +6248,106 @@ button {
   text-decoration: none;
 }
 
+.table.table-select tr:first-of-type th:first-of-type {
+  width: 78px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.table.table-select tr:first-of-type th:first-of-type:after {
+  display: none;
+}
+
+.table.table-select tr:first-of-type th:first-of-type a {
+  margin: 0;
+}
+
+.table.table-select tr:first-of-type th:first-of-type a:hover {
+  color: #39D0AE;
+}
+
+.table.table-select tr th:nth-child(2) {
+  padding-left: 30px;
+}
+
+.table.table-select tr td:first-of-type {
+  padding: 0;
+  border-right: 0;
+}
+
+.table.table-select tr td:nth-child(2) {
+  padding-left: 30px;
+  border-left: 0;
+}
+
+.table.table-select .btn-check-all {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 115px;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 12px;
+  font-weight: 400;
+}
+
+.table.table-select .btn-check-all:hover .select-all {
+  color: white;
+}
+
+.table.table-select .btn-check-all.selected {
+  background-color: #39D0AE;
+}
+
+.table.table-select .btn-check-all.selected:hover {
+  background-color: #fff;
+}
+
+.table.table-select .btn-check-all.selected:hover .deselect-all {
+  color: #39D0AE;
+}
+
+.table.table-select .btn-check-all.selected .select-all {
+  display: none;
+}
+
+.table.table-select .btn-check-all.selected .deselect-all {
+  display: block;
+  color: #fff;
+}
+
+.table.table-select .btn-check-all span {
+  transition: all 0.25s ease-out;
+}
+
+.table.table-select .btn-check-all .select-all {
+  color: #39D0AE;
+}
+
+.table.table-select .btn-check-all .deselect-all {
+  display: none;
+}
+
+.table.table-select .check {
+  text-align: center;
+}
+
+.table.table-select .check .control {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+}
+
+.table.table-select .check .control input:checked ~ .control__indicator {
+  background-color: rgba(57, 208, 174, 0.6);
+}
+
+.table.table-select .check .control__indicator {
+  width: 23px;
+  height: 23px;
+}
+
 .page-manage-contacts .header-inner {
   margin-bottom: 50px;
 }
@@ -6275,9 +6439,21 @@ button {
   position: relative;
 }
 
+.page-generate-pdf .btn-close-wizard {
+  border-color: #39D0AE;
+  position: absolute;
+  top: 45px;
+  right: 65px;
+}
+
+.page-generate-pdf .btn-close-wizard:before, .page-generate-pdf .btn-close-wizard:after {
+  background-color: #39D0AE;
+}
+
 .page-generate-pdf .tab-content {
   padding-top: 125px;
   padding-bottom: 80px;
+  position: relative;
 }
 
 .page-generate-pdf .tab-1 h2,
@@ -6298,29 +6474,48 @@ button {
   margin-bottom: 50px;
 }
 
-.page-generate-pdf .tab-3 .table .btn-check-all {
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 115px;
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 12px;
-  font-weight: 400;
-  color: #fff;
+.page-generate-pdf .tab-3-1 h2 {
+  margin-bottom: 140px;
 }
 
-.page-generate-pdf .tab-3 .table .check {
-  text-align: center;
+.page-generate-pdf .tab-3-1 .square-cards {
+  margin-bottom: 60px;
 }
 
-.page-generate-pdf .tab-3 .table .check .control input:checked ~ .control__indicator {
-  background-color: rgba(57, 208, 174, 0.6);
+.page-generate-pdf .tab-4 h2 {
+  margin-bottom: 90px;
 }
 
-.page-generate-pdf .tab-3 .table .check .control__indicator {
-  width: 23px;
-  height: 23px;
+.page-generate-pdf .tab-4 .search-field {
+  margin-bottom: 63px;
+}
+
+.page-generate-pdf .tab-4 .radio-list {
+  margin-bottom: 60px;
+}
+
+.page-generate-pdf .tab-5 h2 {
+  margin-bottom: 45px;
+}
+
+.page-generate-pdf .tab-5 .btn-send {
+  margin-bottom: 65px;
+}
+
+.page-generate-pdf .tab-5 .well-item .well-item-content {
+  padding-bottom: 15px;
+}
+
+.page-generate-pdf .tab-5 .btn-prev {
+  margin-top: 15px;
+}
+
+.page-generate-pdf .tab-5-1 h2 {
+  margin-bottom: 80px;
+}
+
+.page-generate-pdf .tab-5-1 svg {
+  margin-bottom: 65px;
 }
 
 .page-generate-pdf .btn {
@@ -6334,7 +6529,9 @@ button {
   margin-bottom: 25px;
 }
 
-.page-generate-pdf .btn-cancel {
+.page-generate-pdf .btn-cancel,
+.page-generate-pdf .btn-prev {
+  display: inline-block;
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 14px;
@@ -6343,8 +6540,43 @@ button {
   text-decoration: underline;
 }
 
-.page-generate-pdf .btn-cancel:hover {
+.page-generate-pdf .btn-cancel:hover,
+.page-generate-pdf .btn-prev:hover {
   text-decoration: none;
+}
+
+.search-field input {
+  min-width: 670px;
+  height: 50px;
+  padding: 5px 15px 5px 40px;
+  border: none;
+  border-bottom: 1px solid #39D0AE;
+  box-shadow: none;
+  background: url("../images/icon-search-green.svg") no-repeat center left;
+  background-size: 29px 29px;
+  text-align: center;
+  color: #39D0AE;
+  font-weight: 400;
+  font-size: 40px;
+  font-size: 2.5rem;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
+.search-field input::-webkit-input-placeholder {
+  color: #39D0AE;
+}
+
+.search-field input::-moz-placeholder {
+  color: #39D0AE;
+}
+
+.search-field input:-ms-input-placeholder {
+  color: #39D0AE;
+}
+
+.search-field input:-moz-placeholder {
+  color: #39D0AE;
 }
 
 /*# sourceMappingURL=style.css.map */

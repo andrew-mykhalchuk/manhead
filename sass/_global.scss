@@ -53,6 +53,7 @@ ul {
 header {
 	display: flex;
 	justify-content: space-between;
+	min-width: 1325px;
 	height: 128px;
 	background-color: $black;
 	padding: 38px 50px 38px 118px;
@@ -187,10 +188,9 @@ main {
 		line-height: 27px;
 		font-family: $proxima-s-r;
 		text-transform: uppercase;
-		
 		border: none;
 		border-radius: inherit;
-		
+
 		&:focus {
 			outline: none;
 			& ~ .btn-search {
@@ -203,6 +203,7 @@ main {
 				}
 			}
 		}
+
 	}
 
 	.btn-search {
@@ -242,6 +243,17 @@ main {
 			left: 20px;
 		}
 	}
+}
+
+
+
+
+.results-count {
+	margin-top: 37px;
+	margin-bottom: 12px;
+	@include fsz(16px);
+	line-height: 19px;
+	color: #4a4a4a;
 }
 
 
@@ -736,27 +748,30 @@ form {
 		left: 0;
 		margin: auto;
 	}
-  li {
+  .tab-link {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 36px;
     height: 36px;
-    background-color: $white;
+    background-color: #ebebeb;
     @include fsz(20px);
     line-height: 25px;
-    color: $green;
+    color: $white;
     cursor: pointer;
     border: 2px solid #ebebeb;
     border-radius: 50%;
     position: relative;
+    transition: $transition;
     &.current {
 			background-color: $green;
 			border-color: $green;
 			color: $white;
+			& ~ .tab-link {
+				background-color: $white;
+				color: $green;
+			}
     }
-
-
   }
 }
 
@@ -793,7 +808,7 @@ form {
 			width: 203px;
 			height: 203px;
 			margin: 0 20px;
-			padding: 90px 15px 15px 15px;
+			padding: 90px 10px 15px 10px;
 			background-color: #fafafa;
 			@include fsz(25px);
 			line-height: 30px;
@@ -819,6 +834,12 @@ form {
 				left: 0;
 				margin: auto;
 			}
+			span {
+				display: block;
+				margin-top: 23px;
+				@include fsz(14px);
+				line-height: 17px;
+			}
 		}
 	}
 }
@@ -827,7 +848,24 @@ form {
 
 
 
-
+// Square cards
+.square-cards {
+	display: flex;
+	justify-content: center;
+	.square-item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 203px;
+		height: 203px;
+		background-color: #fafafa;
+		border: 1px solid #ebebeb;
+		border-radius: 2px;
+		&:not(:last-of-type) {
+			margin-right: 40px;
+		}
+	}
+}
 
 
 
@@ -917,4 +955,60 @@ form {
 .datepicker table tr td.today[disabled] {
 	background-color: $green;
 }
+
+
+
+
+
+
+// Well-items
+.well-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 670px;
+	min-height: 70px;
+	margin: 0 auto 25px;
+	padding: 20px;
+	background-color: #fafafa;
+	color: #9b9b9b;
+	border: 1px solid #ebebeb;
+	border-radius: 2px;
+	position: relative;
+	.well-label {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		position: absolute;
+		top: 28px;
+		left: 23px;
+		@include fsz(14px);
+		line-height: 17px;
+		text-transform: uppercase;
+	}
+	.well-title {
+		margin: 0;
+		@include fsz(25px);
+		line-height: 25px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.well-item-content {
+		margin-top: 50px;
+		padding: 0 25px;
+		text-align: justify;
+		p {
+			margin-top: 0;
+			color: #9b9b9b;
+			@include fsz(11px);
+			line-height: 13px;
+		}
+	}
+}
+
+
+
+
+
+
 

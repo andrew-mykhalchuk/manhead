@@ -1,0 +1,184 @@
+extends ./templates/base-template
+
+block vars
+	-var title='Manhead - Search results'
+	-var bodyClass = 'page-search-results'
+	// -var current = 'Browse Data'
+	-var baseHeader = true
+	
+block header
+
+block content
+
+	//- Content wrapper
+	.content-container
+		
+		//- Content header
+		.content-header
+			
+			.header-inner
+				h1 Search results
+				.header-right
+					form.browse-search(action="")
+						.search-wrapper.search-green
+							input.search-field(type="text", placeholder="Search")
+							a.btn-search(href="")
+					a.btn.btn-lg.btn-green(href="generate-pdf.html") Generate PDF
+
+			//- View options
+			.results-count
+				p We found 66 results for “shirt”…
+
+
+		//- Sidebar
+		//- include ./includes/sidebar
+
+		//- Main content
+		main.main-content
+
+			section.item-list
+				table.table.table-bordered.table-select.list-view
+						tr
+							th
+								a.btn.btn-md.btn-white-green.btn-check-all(href="")
+									span.select-all Select All
+									span.deselect-all Deselect All
+							th
+								a(href="")
+									span Website
+									i.arrow-down
+							th.sort-by
+								a(href="")
+									span Title
+									i.arrow-down
+							th
+								a(href="")
+									span Band
+									i.arrow-down
+							th
+								a(href="")
+									span Link
+									i.arrow-down
+							th
+								a(href="")
+									span Image
+									i.arrow-down
+							th
+								a(href="")
+									span Date
+									i.arrow-down
+						tr
+							td.check
+								label.control.control--checkbox
+									input(type='checkbox')
+									.control__indicator
+							td.website Amazon
+							td.title Triad T-Shirt
+							td.band 30 Seconds to mars
+							td.link www.amazon.com/t-shirts/
+							td.image
+								a(href="", data-toggle="modal" data-target="#image-preview-modal")
+									i.icon-img-placeholder
+							td.date 02 04 15
+						tr
+							td.check
+								label.control.control--checkbox
+									input(type='checkbox')
+									.control__indicator
+							td.website Redbubble
+							td.title iPhone Case/Skin
+							td.band 30 Seconds to mars
+							td.link www.redbubble.com
+							td.image
+								a(href="", data-toggle="modal" data-target="#image-preview-modal")
+									i.icon-img-placeholder
+							td.date 02 04 15
+						tr
+							td.check
+								label.control.control--checkbox
+									input(type='checkbox')
+									.control__indicator
+							td.website Redbubble
+							td.title Galaxy T-shirt
+							td.band 30 Seconds to mars
+							td.link www.redbubble.com
+							td.image
+								a(href="", data-toggle="modal" data-target="#image-preview-modal")
+									i.icon-img-placeholder
+							td.date 02 04 15
+						tr
+							td.check
+								label.control.control--checkbox
+									input(type='checkbox')
+									.control__indicator
+							td.website Etsy
+							td.title Galaxy T-shirt
+							td.band Panic at the disco
+							td.link www.etsy.com
+							td.image
+								a(href="", data-toggle="modal" data-target="#image-preview-modal")
+									i.icon-img-placeholder
+							td.date 02 04 15
+						tr
+							td.check
+								label.control.control--checkbox
+									input(type='checkbox')
+									.control__indicator
+							td.website Etsy
+							td.title T-shirt
+							td.band Panic at the disco
+							td.link www.etsy.com
+							td.image
+								a(href="", data-toggle="modal" data-target="#image-preview-modal")
+									i.icon-img-placeholder
+							td.date 02 04 15
+						tr
+							td.check
+								label.control.control--checkbox
+									input(type='checkbox')
+									.control__indicator
+							td.website Etsy
+							td.title T-shirt
+							td.band Panic at the disco
+							td.link www.etsy.com
+							td.image
+								a(href="", data-toggle="modal" data-target="#image-preview-modal")
+									i.icon-img-placeholder
+							td.date 02 04 15
+						tr
+							td.check
+								label.control.control--checkbox
+									input(type='checkbox')
+									.control__indicator
+							td.website Etsy
+							td.title Galaxy T-shirt
+							td.band Panic at the disco
+							td.link
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, modi.
+							td.image
+								a(href="", data-toggle="modal" data-target="#image-preview-modal")
+									i.icon-img-placeholder
+							td.date 02 04 15
+
+
+
+
+				a.text-link.see-more(href="") See more
+
+
+
+
+
+		.modal.modal-img.fade#image-preview-modal(tabindex='-1', role='dialog')
+			.modal-dialog(role='document')
+				.modal-content
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+					.modal-body
+						img(src="./images/image-preview-example.jpg", alt="")
+
+
+block footer
+
+block scripts
+
+block custom-scripts

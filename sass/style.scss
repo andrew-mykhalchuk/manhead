@@ -305,6 +305,103 @@
 }
 
 
+// Table select
+.table.table-select {
+	tr {
+		&:first-of-type {
+			th {
+				&:first-of-type {
+					width: 78px;
+					margin: 0;
+					padding: 0;
+					text-align: left;
+					&:after {
+						display: none;
+					}
+					a {
+						margin: 0;
+						&:hover {
+							color: $green;
+						}
+					}
+				}
+			}
+		}
+		th {
+			&:nth-child(2) {
+				padding-left: 30px;
+			}
+		}
+		td {
+			&:first-of-type {
+				padding: 0;
+				border-right: 0;
+			}
+			&:nth-child(2) {
+				padding-left: 30px;
+				border-left: 0;
+			}
+		}
+	}
+
+	.btn-check-all {
+		justify-content: center;
+		width: 115px;
+		@include fsz(12px);
+		line-height: 12px;
+		font-weight: 400;
+		// color: $white;
+		&:hover {
+			.select-all {
+				color: white;
+			}
+		}
+		&.selected {
+			background-color: $green;
+			&:hover {
+				background-color: $white;
+				.deselect-all {
+					color: $green;
+				}
+			}
+			.select-all {
+				display: none;
+			}
+			.deselect-all {
+				display: block;
+				color: $white;
+			}
+		}
+		span {
+			transition:  $transition;
+		}
+		.select-all {
+			color: $green;
+		}
+		.deselect-all {
+			display: none;
+		}
+	}
+	.check {
+		text-align: center;
+		.control {
+			display: inline-block;
+			width: 23px;
+			height: 23px;
+			input {
+				&:checked ~ .control__indicator {
+					background-color: rgba(57, 208, 174, 0.6);
+				}
+			}
+		}
+		.control__indicator {
+			width: 23px;
+			height: 23px;
+		}
+	}
+}
+
+
 
 
 
@@ -422,12 +519,22 @@
 		position: relative;
 	}
 
+	.btn-close-wizard {
+		border-color: $green;
+		position: absolute;
+		top: 45px;
+		right: 65px;
+		&:before,
+		&:after {
+			background-color: $green;
+		}
+	}
 
 	.tab-content {
 		padding-top: 125px;
 		padding-bottom: 80px;
+		position: relative;
 	}
-
 		
 	.tab-1,
 	.tab-2 {
@@ -447,34 +554,59 @@
 		.btn-generate-pdf {
 			margin-bottom: 50px;
 		}
+	}
 
-		.table {
-			
-			.btn-check-all {
-				justify-content: center;
-				width: 115px;
-				@include fsz(12px);
-				line-height: 12px;
-				font-weight: 400;
-				color: $white;
-			}
-			.check {
-				text-align: center;
-				.control {
-					input {
-						&:checked ~ .control__indicator {
-							background-color: rgba(57, 208, 174, 0.6);
-						}
-					}
-				}
-				.control__indicator {
-					width: 23px;
-					height: 23px;
 
-				}
-			}
+
+	.tab-3-1 {
+		h2 {
+			margin-bottom: 140px;
+		}
+		.square-cards {
+			margin-bottom: 60px;
 		}
 	}
+
+
+
+	.tab-4 {
+		h2 {
+			margin-bottom: 90px;
+		}
+		.search-field {
+			margin-bottom: 63px;
+		}
+		.radio-list {
+			margin-bottom: 60px;
+		}
+	}
+
+	.tab-5 {
+		h2 {
+			margin-bottom: 45px;
+		}
+		.btn-send {
+			margin-bottom: 65px;
+		}
+		.well-item {
+			.well-item-content {
+				padding-bottom: 15px;
+			}
+		}
+		.btn-prev {
+			margin-top: 15px;
+		}
+	}
+
+	.tab-5-1 {
+		h2 {
+			margin-bottom: 80px;
+		}
+		svg {
+			margin-bottom: 65px;
+		}
+	}
+
 
 
 	.btn {
@@ -486,7 +618,9 @@
 	.btn-next {
 		margin-bottom: 25px;
 	}
-	.btn-cancel {
+	.btn-cancel,
+	.btn-prev {
+		display: inline-block;
 		@include fsz(12px);
 		line-height: 14px;
 		color: #9b9b9b;
@@ -499,7 +633,36 @@
 }
 
 
-
+.search-field {
+	input {
+		min-width: 670px;
+		height: 50px;
+		padding: 5px 15px 5px 40px;
+		border: none;
+		border-bottom: 1px solid $green;
+		box-shadow: none;
+		background: url('../images/icon-search-green.svg') no-repeat center left;
+		background-size: 29px 29px;
+		text-align: center;
+		color: $green;
+		font-weight: 400;
+		@include fsz(40px);
+		line-height: 48px;
+		text-transform: uppercase;
+		&::-webkit-input-placeholder {
+		  color: $green;
+		}
+		&::-moz-placeholder {
+		  color: $green;
+		}
+		&:-ms-input-placeholder {
+		  color: $green;
+		}
+		&:-moz-placeholder {
+		  color: $green;
+		}
+	}
+}
 
 
 

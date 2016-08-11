@@ -12,15 +12,16 @@ block content
 
 	//- Content wrapper
 	.content-container
-		a.close.btn-close-wizard(href="")
-
 
 		//- Main content
 		main.main-content
 			
 
 			#step-1.tab-1.tab-content.current
+				a.close.btn-close-wizard(href="browse-data-card-view.html")
+
 				h2 What band would you like to pull data for?
+
 				ul.radio-list
 					li
 						input#band-item-1(type="radio" name="band" value="30 Seconds to Mars")
@@ -35,12 +36,15 @@ block content
 						input#band-item-4(type="radio" name="band" value="Lorem ipsum lorem")
 						label(for="band-item-4") Lorem ipsum lorem
 
-				span.btn.btn-md.btn-white-green.btn-next(data-tab="step-2") Next
+				span.btn.btn-md.btn-green.btn-next(data-tab="step-2") Next
 				a.btn-cancel(href="") Cancel
 				
 
 			#step-2.tab-2.tab-content
+				a.close.btn-close-wizard(href="browse-data-card-view.html")
+
 				h2 From what website?
+
 				ul.radio-list
 					li
 						input#website-item-1(type="radio" name="band" value="Amazon")
@@ -52,20 +56,24 @@ block content
 						input#website-item-3(type="radio" name="band" value="Etsy")
 						label(for="website-item-3") Etsy
 				
-				span.btn.btn-md.btn-white-green.btn-next(data-tab="step-2") Next
-				a.btn-cancel(href="") Cancel
+				span.btn.btn-md.btn-green.btn-next(data-tab="step-3") Next
+				span.btn-prev(data-tab="step-1") Previous Step
 			
 
 			#step-3.tab-3.tab-content
+				a.close.btn-close-wizard(href="browse-data-card-view.html")
+
 				h2 We’ve found 7 results that match your selections!
 				
 				a.btn.btn-lg.btn-green.btn-generate-pdf(href="generate-pdf.html") Generate PDF
 
 				section.item-list
-					table.table.table-bordered.list-view
+					table.table.table-bordered.table-select.list-view
 						tr
 							th
-								a.btn.btn-md.btn-green.btn-check-all(href="") Deselect All
+								a.btn.btn-md.btn-white-green.btn-check-all(href="")
+									span.select-all Select All
+									span.deselect-all Deselect All
 							th
 								a(href="")
 									span Website
@@ -93,7 +101,7 @@ block content
 						tr
 							td.check
 								label.control.control--checkbox
-									input(type='checkbox', checked)
+									input(type='checkbox')
 									.control__indicator
 							td.website Amazon
 							td.title Triad T-Shirt
@@ -106,7 +114,7 @@ block content
 						tr
 							td.check
 								label.control.control--checkbox
-									input(type='checkbox', checked)
+									input(type='checkbox')
 									.control__indicator
 							td.website Redbubble
 							td.title iPhone Case/Skin
@@ -119,7 +127,7 @@ block content
 						tr
 							td.check
 								label.control.control--checkbox
-									input(type='checkbox', checked)
+									input(type='checkbox')
 									.control__indicator
 							td.website Redbubble
 							td.title Galaxy T-shirt
@@ -132,7 +140,7 @@ block content
 						tr
 							td.check
 								label.control.control--checkbox
-									input(type='checkbox', checked)
+									input(type='checkbox')
 									.control__indicator
 							td.website Etsy
 							td.title Galaxy T-shirt
@@ -145,7 +153,7 @@ block content
 						tr
 							td.check
 								label.control.control--checkbox
-									input(type='checkbox', checked)
+									input(type='checkbox')
 									.control__indicator
 							td.website Etsy
 							td.title T-shirt
@@ -158,7 +166,7 @@ block content
 						tr
 							td.check
 								label.control.control--checkbox
-									input(type='checkbox', checked)
+									input(type='checkbox')
 									.control__indicator
 							td.website Etsy
 							td.title T-shirt
@@ -171,7 +179,7 @@ block content
 						tr
 							td.check
 								label.control.control--checkbox
-									input(type='checkbox', checked)
+									input(type='checkbox')
 									.control__indicator
 							td.website Etsy
 							td.title Galaxy T-shirt
@@ -183,22 +191,95 @@ block content
 									i.icon-img-placeholder
 							td.date 02 04 15
 
-				a.btn-cancel(href="") Previous step
+				span.btn-prev(data-tab="step-2") Previous step
+			
+
+
+			#step-3-1.tab-3-1.tab-content
+				a.close.btn-close-wizard(href="browse-data-card-view.html")
+
+				h2 Download the PDF report or email?
+
+				.square-cards
+					.square-item
+						a(href="", title="Download report")
+							img(src="./images/icon-download.svg", alt="")
+					.square-item
+						a(href="", title="Email report")
+							img(src="./images/icon-mail.svg", alt="")
+
+				span.btn.btn-md.btn-green.btn-next(data-tab="step-4") Next
+				span.btn-prev(data-tab="step-3") Previous Step
+
+
 
 			#step-4.tab-4.tab-content
-				h2 Tab 4
+				a.close.btn-close-wizard(href="browse-data-card-view.html")
 
-			#step-5.tab-5.tab-content
-				h2 Tab 5
-			
-			
+				h2 Who would you like to share the results with?
 
-		.modal.modal-img.fade#image-preview-modal(tabindex='-1', role='dialog')
-			.modal-dialog(role='document')
-				.modal-content
-					button.close(type='button', data-dismiss='modal', aria-label='Close')
-					.modal-body
-						img(src="./images/image-preview-example.jpg", alt="")
+				.search-field
+					input(type="search", placeholder="Search")
+				ul.radio-list
+					li
+						input#contact-item-1(type="radio" name="contact" value="John Murray")
+						label(for="contact-item-1")
+							| John Murray
+							span.website Etsy
+					li
+						input#contact-item-2(type="radio" name="contact" value="John Nier")
+						label(for="contact-item-2")
+							| John Nier
+							span.website Etsy
+					li
+						input#contact-item-3(type="radio" name="contact" value="John Raclet")
+						label(for="contact-item-3")
+							| John Raclet
+							span.website Redbubble
+					li
+						input#contact-item-4(type="radio" name="contact" value="John Thomas")
+						label(for="contact-item-4")
+							| John Thomas
+							span.website Amazon
+
+				
+				span.btn.btn-md.btn-green.btn-next(data-tab="step-5") Review & Send
+				span.btn-prev(data-tab="step-3-1") Previous Step
+
+			#step-5.tab-5.js-review-report.tab-content
+				a.close.btn-close-wizard(href="browse-data-card-view.html")
+
+				h2 Review and edit your message.
+				
+				a.btn.btn-md.btn-green.btn-send(href="") Send
+
+				.well-item
+					p.well-label To
+					h3.well-title John Nier
+
+				.well-item
+					p.well-label Subject line
+					h3.well-title.text-green Removal request
+
+				.well-item
+					p.well-label Body of email
+					
+					.well-item-content
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu orci efficitur, vestibulum magna vulputate, luctus lectus. Pellentesque non luctus quam. Sed non posuere arcu. Proin eget tincidunt lorem. Nunc iaculis mauris nulla. Donec blandit sagittis quam, a suscipit quam consectetur quis. Nam felis turpis, gravida ac maximus at, laoreet non enim. Suspendisse id dolor a risus tempus ultricies. Cras pellentesque sodales sem, ac interdum dui egestas eget.
+						p Vestibulum finibus facilisis pulvinar. Nam iaculis dui sollicitudin sapien sagittis congue. Aenean sed risus orci. Nam ac laoreet nisl, a fringilla lorem. Maecenas a interdum quam. Maecenas felis augue, finibus nec consequat eget, consequat quis dui. Curabitur scelerisque lacus quis lorem venenatis, in laoreet dolor ultricies. Etiam dapibus malesuada dapibus.
+						p Vestibulum euismod ex a diam feugiat pharetra. Mauris consequat posuere ex consequat blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend ex massa, sit amet fringilla quam convallis elementum. Praesent maximus erat id fringilla posuere. Nam eleifend, nisi id semper interdum, enim nunc venenatis eros, non venenatis mi sem a sapien. Etiam vel dui enim.
+						p Nunc eget cursus dui. Praesent luctus est id egestas lobortis. Sed vitae quam augue. In volutpat, sem et ornare sagittis, nibh nisl congue nulla, at euismod enim est id sem. Sed hendrerit mollis consectetur. Morbi ac odio in nulla commodo finibus eu a nisi. Proin vel dui bibendum, efficitur augue sed, cursus dolor. Duis vel facilisis odio. Aliquam erat volutpat. Sed in maximus augue. Maecenas ac nunc eros. Phasellus finibus diam in felis luctus semper.
+						p Mauris imperdiet ipsum at massa ornare tincidunt. Praesent vestibulum lorem sit amet dui commodo pellentesque. Mauris sit amet imperdiet turpis. Ut molestie urna sit amet suscipit tristique. Pellentesque volutpat eget neque vitae mattis. In sed elit vel libero condimentum consequat. Integer consectetur est a justo sodales consectetur. Ut ac nisi quis mi sollicitudin malesuada a ac ipsum. Mauris dictum tincidunt odio et porttitor. Ut eget diam vitae elit mattis ornare quis quis urna. Aenean posuere eros nulla, et porta nulla aliquam consectetur. Sed vestibulum magna at pretium feugiat. Integer a sodales ipsum.
+
+				span.btn-prev(data-tab="step-4") Previous Step
+
+			#step-5-1.tab-5-1.tab-content
+				h2 Your report has been sent!
+
+				svg(xmlns='http://www.w3.org/2000/svg', width='61', height='61')
+					path(fill='#39d0ae', d='M0 30.49C0 47.34 13.66 61 30.51 61 47.35 61 61 47.34 61 30.49 61 13.65 47.35 0 30.51 0 13.66 0 0 13.65 0 30.49zm28.7 10.8c-.06.07-.13.13-.21.2-.04.06-.09.09-.14.14-.24.21-.48.38-.7.54-.02.02-.02 0-.02.02-.24.14-.46.27-.7.34-.22.08-.45.12-.67.16h-.34c-.6-.04-1.21-.23-1.74-.63-.05-.01-.1-.05-.14-.09-.16-.08-.28-.21-.4-.32-.07-.05-.13-.11-.18-.16l-7.8-7.79c-.97-.99-1.45-1.91-1.42-2.78.03-.88.41-1.66 1.15-2.39.74-.74 1.55-1.14 2.43-1.19.86-.03 1.79.45 2.78 1.43l5.39 5.38 14.43-14.41c.97-.99 1.9-1.47 2.78-1.44.86.03 1.66.43 2.39 1.17.74.73 1.14 1.53 1.17 2.39.03.88-.43 1.81-1.42 2.8z')
+
+				a.btn.btn-md.btn-green.btn-home(href="./") Back to home
 
 
 block footer
