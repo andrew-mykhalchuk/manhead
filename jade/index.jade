@@ -12,16 +12,85 @@ block content
 
 	main.main-content
 	
+		//- Content wrapper
+		.content-container
+			
+			//- Content header
+			.content-header
+				
+				.header-inner
+					h1
+						| Good morning, 
+						span.username Chris!
+					.header-right
+						form.browse-search(action="")
+							.search-wrapper.search-green
+								input.search-field(type="text", placeholder="Search")
+								a.btn-search(href="")
+						a.btn.btn-lg.btn-green(href="generate-pdf.html") Generate PDF
+
+				
+			.reports
+				.report-item.monthly-report
+					h2 Monthly report
+
+				.report-item.report-to-date
+					h2 Reports to date
 
 
 
+			.action-bar
+				select#sort-by.selectpicker.select-filter(name="")
+					option(value="Most recent") Most recent
+					option(value="Name A-Z") Name A-Z
+					option(value="Name Z-A") Name Z-A
+					option(value="Best sellers") Best sellers
+				.date-picker
+					input(type="text", value="March 22, 2016")
+					span.caret
 
 
-
-
-
-
-
+			.report-table
+				.table-row
+					p.row-title Amazon
+					.data-group
+						p.label Products
+						p.number 867
+					.data-group
+						p.label Emails sent
+						p.number 22
+				.table-row
+					p.row-title Etsy
+					.data-group
+						p.label Products
+						p.number 867
+					.data-group
+						p.label Emails sent
+						p.number 22
+				.table-row
+					p.row-title Redbubble
+					.data-group
+						p.label Products
+						p.number 78
+					.data-group
+						p.label Emails sent
+						p.number 12
+				.table-row
+					p.row-title Lorem Ipsum
+					.data-group
+						p.label Products
+						p.number 22
+					.data-group
+						p.label Emails sent
+						p.number 8
+				.table-row
+					p.row-title Lorem Ipsum
+					.data-group
+						p.label Products
+						p.number 14
+					.data-group
+						p.label Emails sent
+						p.number 9
 
 
 
