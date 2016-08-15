@@ -36,9 +36,11 @@
         <div class="reports">
           <div class="report-item monthly-report">
             <h2>Monthly report</h2>
+            <canvas id="bar-chart" width="400" height="400"></canvas>
           </div>
           <div class="report-item report-to-date">
             <h2>Reports to date</h2>
+            <canvas id="donut-chart" width="400" height="400"></canvas>
           </div>
         </div>
         <div class="action-bar">
@@ -55,55 +57,55 @@
         <div class="report-table">
           <div class="table-row">
             <p class="row-title">Amazon</p>
-            <div class="data-group">
+            <div class="data-group data-product">
               <p class="label">Products</p>
               <p class="number">867</p>
             </div>
-            <div class="data-group">
+            <div class="data-group data-email">
               <p class="label">Emails sent</p>
               <p class="number">22</p>
             </div>
           </div>
           <div class="table-row">
             <p class="row-title">Etsy</p>
-            <div class="data-group">
+            <div class="data-group data-product">
               <p class="label">Products</p>
               <p class="number">867</p>
             </div>
-            <div class="data-group">
+            <div class="data-group data-email">
               <p class="label">Emails sent</p>
               <p class="number">22</p>
             </div>
           </div>
           <div class="table-row">
             <p class="row-title">Redbubble</p>
-            <div class="data-group">
+            <div class="data-group data-product">
               <p class="label">Products</p>
               <p class="number">78</p>
             </div>
-            <div class="data-group">
+            <div class="data-group data-email">
               <p class="label">Emails sent</p>
               <p class="number">12</p>
             </div>
           </div>
           <div class="table-row">
             <p class="row-title">Lorem Ipsum</p>
-            <div class="data-group">
+            <div class="data-group data-product">
               <p class="label">Products</p>
               <p class="number">22</p>
             </div>
-            <div class="data-group">
+            <div class="data-group data-email">
               <p class="label">Emails sent</p>
               <p class="number">8</p>
             </div>
           </div>
           <div class="table-row">
             <p class="row-title">Lorem Ipsum</p>
-            <div class="data-group">
+            <div class="data-group data-product">
               <p class="label">Products</p>
               <p class="number">14</p>
             </div>
-            <div class="data-group">
+            <div class="data-group data-email">
               <p class="label">Emails sent</p>
               <p class="number">9</p>
             </div>
@@ -115,6 +117,16 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-select.min.js"></script>
     <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/chart-data.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      $('.date-picker input').datepicker({
+      format: "MM dd, yyyy",
+      orientation: "bottom auto",
+      todayHighlight: true,
+      autoclose: true
+      });
+    </script>
   </body>
 </html>

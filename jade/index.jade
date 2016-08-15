@@ -34,8 +34,14 @@ block content
 				.report-item.monthly-report
 					h2 Monthly report
 
+					canvas#bar-chart(width='400', height='400')
+
+
 				.report-item.report-to-date
 					h2 Reports to date
+
+					canvas#donut-chart(width='400', height='400')
+
 
 
 
@@ -53,42 +59,42 @@ block content
 			.report-table
 				.table-row
 					p.row-title Amazon
-					.data-group
+					.data-group.data-product
 						p.label Products
 						p.number 867
-					.data-group
+					.data-group.data-email
 						p.label Emails sent
 						p.number 22
 				.table-row
 					p.row-title Etsy
-					.data-group
+					.data-group.data-product
 						p.label Products
 						p.number 867
-					.data-group
+					.data-group.data-email
 						p.label Emails sent
 						p.number 22
 				.table-row
 					p.row-title Redbubble
-					.data-group
+					.data-group.data-product
 						p.label Products
 						p.number 78
-					.data-group
+					.data-group.data-email
 						p.label Emails sent
 						p.number 12
 				.table-row
 					p.row-title Lorem Ipsum
-					.data-group
+					.data-group.data-product
 						p.label Products
 						p.number 22
-					.data-group
+					.data-group.data-email
 						p.label Emails sent
 						p.number 8
 				.table-row
 					p.row-title Lorem Ipsum
-					.data-group
+					.data-group.data-product
 						p.label Products
 						p.number 14
-					.data-group
+					.data-group.data-email
 						p.label Emails sent
 						p.number 9
 
@@ -100,3 +106,10 @@ block footer
 block scripts
 
 block custom-scripts
+	script
+		| $('.date-picker input').datepicker({
+		| format: "MM dd, yyyy",
+		| orientation: "bottom auto",
+		| todayHighlight: true,
+		| autoclose: true
+		| });

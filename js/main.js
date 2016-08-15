@@ -171,165 +171,23 @@ $(document).ready(function() {
 
   });
 
+  // var elems = $('.table-row .data-product .number').text();
+  // var values = $.makeArray(elems).join(', ');
+  // var value1 = $('.table-row:first-child .data-product .number').text();
+
+
+  // var values = $('.table-row .data-product .number').map(function(){
+  //   return $(this).text();
+  // });
+
+
+  // var labels = $('.table-row .row-title').map(function(){
+  //   return $(this).text();
+  // });
+
+  // console.log(labels);
+
 });
 
 
 
-
-// var checkBox = $('.table-select').find('.check input[type="checkbox"]');
-
-
-
-// checkBox.prop('checked', true);
-
-// checkBox.on('change', function(){
-//   console.log(checkBox.prop('checked').length);
-// });
-
-// $(checkBox).change(function(){
-//   console.log(check.prop('checked'));
-//   console.log(check.length);
-
-//     // if (check.is('checked').length == check.length) {
-//     //   console.log("Checked");
-//     // } else {
-//     //   console.log("Unchecked");
-//     // }
-// });
-
-// $('.check input').on('change', function(){
-//   var checked = $('.check input');
-
-//   if (checked.prop('checked')) {
-//     console.log("Checked");
-//   } else {
-//     console.log("Unchecked");
-//   }
-//   // console.log(checked);
-
-
-//     // if ($('.check').prop("checked").length == $('.check').length) {
-//     //    //do something
-//     //    console.log('All items checked');
-//     // }
-// });
-// });
-
-
-// // Header resize
-// $(window).on('scroll', function() {
-//   var scroll = $(window).scrollTop();
-
-//   if (scroll >= 290) {
-//     $(".page-how-it-works").addClass("small-header");
-//   } else {
-//     $(".page-how-it-works").removeClass("small-header");
-//   }
-// });
-
-
-
-// // Accordion
-// (function($) {
-//   $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
-
-//   $('.accordion a').click(function(j) {
-//     var dropDown = $(this).closest('li').find('.accordion-content');
-
-//     $(this).closest('.accordion').find('.accordion-content').not(dropDown).slideUp(220);
-
-//     if ($(this).hasClass('active')) {
-//       $(this).removeClass('active');
-//     } else {
-//       $(this).closest('.accordion').find('a.active').removeClass('active');
-//       $(this).addClass('active');
-//     }
-
-//     dropDown.stop(false, true).slideToggle(220);
-
-//     j.preventDefault();
-//   });
-// })(jQuery);
-
-
-
-// // ZenoLive Player
-// $(document).ready(function() {
-//   var player = $('.zeno-player'),
-//       body =  $('body'),
-//       closeMessage = $('.zeno-player .message .btn-close');
-
-//   closeMessage.on('click', function() {
-//     body.removeClass('body-overlay');
-//     player.removeClass('expanded');
-//     $('.message').addClass('is-hidden');
-//   });
-
-//   $('.btn-playlist').on('click', function() {
-//     if (true) {
-//       closeMessage.trigger('click');
-//       body.toggleClass('body-overlay');
-//       player.toggleClass('expanded');
-//       $('.playlist').toggleClass('is-hidden');
-//     } else {
-//       body.toggleClass('body-overlay');
-//       player.toggleClass('expanded');
-//       $('.playlist').toggleClass('is-hidden');
-//     }
-
-
-//   });
-// });
-
-
-// $(document).mousedown(function(e) {
-//   var clicked = $(e.target); // get the element clicked
-
-//   if (clicked.is('.message *') || clicked.is('.btn-playlist') || clicked.is('.playlist *')) {
-//     return;
-//   } else {
-//     $('body').removeClass('body-overlay');
-//     $('.zeno-player').removeClass('expanded');
-//     $('.message, .playlist').addClass('is-hidden');
-//   }
-// });
-
-
-
-// // Custom select boxes
-// $('select').selectBox({
-//     mobile: true,
-//     menuTransition: 'fade',
-//     menuSpeed: 'fast'
-// });
-
-// $(document).ready(function() {
-//   $('.select-wrapper').on('click', function() {
-//     $(this).toggleClass('active');
-//   })
-
-//   $('.select-item a').on('click', function(e) {
-//     e.preventDefault();
-//   })
-// });
-
-// $(document).mousedown(function(e) {
-//   var clicked = $(e.target); // get the element clicked
-
-//   if (clicked.is('.select-wrapper *')) {
-//     return;
-//   } else {
-//     $('.select-wrapper').removeClass('active');
-//   }
-// });
-
-
-// // Comments
-// $(document).ready(function() {
-//   $('.new-comment .comment-heading').on('click', function() {
-//     var _this = $(this);
-//     var newComment = _this.parent('.new-comment');
-
-//     newComment.toggleClass('collapsed').toggleClass('expanded');
-//   });
-// });
