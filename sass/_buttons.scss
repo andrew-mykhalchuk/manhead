@@ -57,6 +57,18 @@ button {
 }
 
 
+.btn-transparent {
+	color: $white;
+	background-color: $green;
+	border: 1px solid $green;
+	&:hover {
+		color: $green;
+		background-color: $white;
+		border-color: $green;
+	}
+}
+
+
 
 
 

@@ -907,10 +907,115 @@ form {
 
 }
 
+
+
 .datepicker-dropdown {
+	min-width: 330px;
+	padding: 20px 40px;
+	background-color: $black;
 	&:before,
 	&:after {
 		display: none;
+	}
+	// &.datepicker-orient-right {
+	// 	&:before {
+	// 		right: 15px;
+	// 		border-bottom-color: $black;
+	// 	}
+	// }
+	.table-condensed {
+		border-collapse: separate;
+		border-spacing: 3px;
+		tr {
+			th {
+				color: $white;
+			}
+			.dow {
+				display: none;
+				opacity: .7;
+			}
+		}
+		.datepicker-switch {
+			@include fsz(25px);
+			line-height: 25px;
+		}
+		thead {
+			tr {
+				th {
+					border: 0.75px solid transparent;
+					&:hover:not(.dow) {
+						background-color: rgba($white, .15);
+						border-color: rgba($white, 0.2);
+						border-radius: 1.5px;
+					}
+				}
+			}
+		}
+		tbody {
+			tr {
+				td {
+					@include fsz(12px);
+					line-height: 12px;
+					font-family: $proxima-s-r;
+				}
+				.day {
+					min-width: 47px;
+					height: 47px;
+					padding: 0;
+					color: $white;
+					border: 0.75px solid rgba($white, 0.2);
+					border-radius: 1.5px;
+					&.old,
+					&.new {
+						opacity: .25;
+					}
+					span {
+						min-width: 47px;
+					}
+				}
+			}
+		}
+		
+	}
+	.datepicker-months,
+	.datepicker-years,
+	.datepicker-decades,
+	.datepicker-centuries {
+		// width: 240px;
+		thead {
+			tr {
+				th {
+					min-width: 47px;
+				}
+			}
+		}
+		tbody {
+			min-width: 220px;
+			tr {
+				span {
+					min-width: 47px;
+					padding: 0;
+					color: $white;
+					border: 0.75px solid rgba($white, 0.2);
+					border-radius: 1.5px;
+					&:hover {
+						background: rgba($white, .25);
+						color: $green;
+					}
+				}
+				.focused {
+					background: rgba($white, .25);
+				}
+				.active.active {
+					background: $green;
+					text-shadow: none;
+					&:hover {
+						background: $green;
+						color: $black;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -935,6 +1040,9 @@ form {
 .datepicker table tr td.active:hover[disabled],
 .datepicker table tr td.active[disabled] {
 	background: $green;
+	&:hover {
+		color: $white;
+	}
 }
 
 .datepicker table tr td.today,
@@ -942,6 +1050,13 @@ form {
 .datepicker table tr td.today.disabled:hover,
 .datepicker table tr td.today:hover {
 	background: rgba($green, .25);
+}
+
+
+.datepicker table tr td.day.focused,
+.datepicker table tr td.day:hover {
+	color: $green;
+	background-color: rgba($white, .25);
 }
 
 .datepicker table tr td.today.active,
